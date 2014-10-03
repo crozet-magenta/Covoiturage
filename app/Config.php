@@ -8,7 +8,7 @@ class Config
 
     static public function load()
     {
-        self::$config = parse_ini_file(ROOT . 'app/config.ini', true);
+        self::$config = parse_ini_file(ROOT . 'app/Config.ini', true);
     }
 
     static public function get($value)

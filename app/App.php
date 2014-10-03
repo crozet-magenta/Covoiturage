@@ -7,6 +7,7 @@ class App
 {
     static function run()
     {
+        App::checkVersion();
         App::loadCore();
         if (Config::get('app.Debug')) {
             ini_set('display_errors',1);
@@ -16,6 +17,7 @@ class App
             ini_set('display_errors',0);
             ini_set('display_startup_errors',0);
         }
+        Router::dumpRoutes();
     }
 
     static function loadCore()
@@ -27,6 +29,13 @@ class App
 
         Config::load();
         Router::load();
+    }
+
+    static function checkVersion()
+    {
+        if (version_compare(phpversion(), '5.4', '<')) {
+            die('<meta charset=UTF-8>Votre version de PHP est obsolète, veuillez installer une version plus récente');
+        }
     }
 }
 
