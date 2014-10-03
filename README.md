@@ -17,10 +17,10 @@ soit vous passez sur un linux à jour, soit vous installez php 5.5 via les dép�
 ##Todo
 ####Pour la structure
 - [ ] Gestion des requêtes
-    - [ ] Parseur
-    - [ ] Méthode
+    - [x] Parseur
+    - [x] Méthode
     - [ ] Generateur d'URL
-- [ ] Routeur
+- [x] Routeur
 - [ ] Class autoloader
 - [x] Gestion de config
 
