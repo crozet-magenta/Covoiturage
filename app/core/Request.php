@@ -7,7 +7,7 @@ class Request
 {
     static public $authorizedMethods = ['GET', 'POST', 'PUT', 'DELETE'];
 
-    static private function getMethod()
+    static public function getMethod()
     {
         if (isset($_POST['_method']) && in_array($_POST['_method'], self::$authorizedMethods)) {
             $method = $_POST['_method'];
@@ -36,4 +36,20 @@ class Request
     {
         return self::getMethod() == 'DELETE';
     }
+
+    static public function getFull()
+    {
+        return 'http://' . Config::get('app.Host') . $_SERVER['REQUEST_URI'];
+    }
+
+    static public function getClean()
+    {
+        return explode('?', self::getFull())[0];
+    }
+
+    static public function getURI()
+    {
+        return explode('?', $_SERVER['REQUEST_URI'])[0] . '/';
+    }
+
 }

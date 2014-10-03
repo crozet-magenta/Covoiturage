@@ -6,10 +6,13 @@
 class Router
 {
     static private $routes;
+    static private $default;
+    static private $host;
     
     static public function load()
     {
         require_once APP . 'routes.php';
+        self::$host = Config::get('app.Host');
     }
 
     static public function register($method, $param)
@@ -21,28 +24,34 @@ class Router
             trigger_error('Missing parameters for Router::register()', E_USER_ERROR);
         }
 
-        $name       = (isset($param['name']))?$param['name']:'';
-        $url        = $param['url'];
-        $controller = $param['controller'];
-        $action     = $param['action'];
-
-        $route               = self::parseUrl($url);
-        $route['url']        = $url;
-        $route['controller'] = $controller;
-        $route['action']     = $action;
+        $route               = self::parseUrl($param['url']);
+        $route['url']        = $param['url'];
+        $route['controller'] = $param['controller'];
+        $route['action']     = $param['action'];
 
         self::$routes[$method][] = $route;
+    }
+
+    static public function fallback($param)
+    {
+        if (!isset($param['controller']) | !isset($param['action'])) {
+            trigger_error('Missing parameters for Router::default()', E_USER_ERROR);
+        }
+
+        self::$default['controller'] = $param['controller'];
+        self::$default['action']     = $param['action'];
+
     }
 
     static private function parseUrl($url)
     {
         $parts = explode('/', $url);
         unset($parts[0]);
-        $parsed['pattern'] = '\\/';
+        $parsed['pattern'] = '#^\\/';
+        $parsed['params']  = array();
         foreach ($parts as $part) {
             if ($part[0] != '{') {
                 $parsed['pattern'].= $part . '\\/';
-                $parsed['params']  = array();
             } else if ($part[1] != '?') {
                 $parsed['pattern'] .= '(\w*)\\/';
                 $parsed['params'][] = substr($part, 1, -1);
@@ -50,7 +59,9 @@ class Router
                 $parsed['pattern'] .= '(?:(\w*)\\/)?';
                 $parsed['params'][] = substr($part, 2, -1);
             }
+            
         }
+        $parsed['pattern'].= '$#';
         return $parsed;
     }
 
@@ -65,5 +76,30 @@ class Router
             echo '<br>';
         }
         echo '</pre>';
+    }
+
+    static public function dispatch()
+    {
+        $request = Request::getURI();
+        $method  = Request::getMethod();
+        foreach (self::$routes[$method] as $route) {
+            preg_match($route['pattern'], $request, $params);
+            if (isset($params[0])) {
+                unset($params[0]);
+                $controller = $route['controller'];
+                $action = $route['action'];
+                include APP . 'controllers/' . $controller . 'Controller.php';
+                $class = new $controller();
+                call_user_func([$class, $action], $params);
+                return;
+            }
+        }
+        if (!empty(self::$default)) {
+            $controller = self::$default['controller'];
+            $action = self::$default['action'];
+            include APP . 'controllers/' . $controller . 'Controller.php';
+            $class = new $controller();
+            call_user_func([$class, $action], $params);
+        }
     }
 }

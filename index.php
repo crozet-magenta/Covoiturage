@@ -5,7 +5,7 @@ define('APP',  __DIR__ . '/app/');
 define('CORE', __DIR__ . '/app/core/');
 
 
-require_once 'app/core/App.php';
+require_once CORE . 'App.php';
 App::run();
 
 
