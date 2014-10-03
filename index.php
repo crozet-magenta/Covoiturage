@@ -1,9 +1,11 @@
 <?php
 define('START', microtime(true));
 define('ROOT', __DIR__ . '/');
+define('APP',  __DIR__ . '/app/');
+define('CORE', __DIR__ . '/app/core/');
 
 
-require_once 'app/App.php';
+require_once 'app/core/App.php';
 App::run();
 
 

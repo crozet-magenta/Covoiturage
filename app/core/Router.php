@@ -9,7 +9,7 @@ class Router
     
     static public function load()
     {
-        require_once ROOT . 'app/routes.php';
+        require_once APP . 'routes.php';
     }
 
     static public function register($method, $param)

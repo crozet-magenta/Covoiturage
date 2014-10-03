@@ -22,10 +22,10 @@ class App
 
     static function loadCore()
     {
-        require_once ROOT . 'app/Config.php';
-        require_once ROOT . 'app/Router.php';
-        require_once ROOT . 'app/Request.php';
-        //require_once ROOT . 'app/Helpers.php';
+        require_once CORE . 'Config.php';
+        require_once CORE . 'Router.php';
+        require_once CORE . 'Request.php';
+        //require_once CORE . 'Helpers.php';
 
         Config::load();
         Router::load();
