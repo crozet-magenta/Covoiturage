@@ -26,7 +26,7 @@ Le point d'entrée du site est le fichier index.php qui se trouve à la racine.
 - les fichiers de models ont le nom du model suivi de 'Model' (`NameModel.php`)
 
 ##4. les classes
-- **App : **La classe app inclut les fichiers nécessaires au coeur de l'application
-- **Config : **La classe config permet de lire le fichier de configuration (fichier ini)
-- **Request : **la classe request permet de connaitre des paramètres relatifs à la requête reçue
-- **Router : **La classe router permet d'enregistrer les routes pour relier les URL aux actions de controlleurs et de générer des URL
+- **App :** La classe app inclut les fichiers nécessaires au coeur de l'application
+- **Config :** La classe config permet de lire le fichier de configuration (fichier ini)
+- **Request :** la classe request permet de connaitre des paramètres relatifs à la requête reçue
+- **Router :** La classe router permet d'enregistrer les routes pour relier les URL aux actions de controlleurs et de générer des URL
