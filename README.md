@@ -1,5 +1,6 @@
 Covoiturage
 ===========
+[Documentation](doc.md)
 
 ##Dépendances
 
@@ -30,4 +31,3 @@ soit vous passez sur un linux à jour, soit vous installez php 5.5 via les dép�
     - [ ] Maquette
     - [ ] Intégration maquette
 - [ ] voir les fonctionnalités à mettre
-

@@ -11,7 +11,7 @@ class Router
     
     static public function load()
     {
-        require_once APP . 'routes.php';
+        require_once APP . 'Routes.php';
         self::$host = Config::get('app.Host');
     }
 
@@ -90,7 +90,7 @@ class Router
                 $action = $route['action'];
                 include APP . 'controllers/' . $controller . 'Controller.php';
                 $class = new $controller();
-                call_user_func([$class, $action], $params);
+                call_user_func_array([$class, $action], $params);
                 return;
             }
         }
@@ -99,7 +99,7 @@ class Router
             $action = self::$default['action'];
             include APP . 'controllers/' . $controller . 'Controller.php';
             $class = new $controller();
-            call_user_func([$class, $action], $params);
+            call_user_func([$class, $action]);
         }
     }
 }

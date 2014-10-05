@@ -8,8 +8,8 @@ class App
     static function run()
     {
         self::checkVersion();
-        self::loadCore();
         self::setErrorMode();
+        self::loadCore();
 
         Router::Dispatch();
     }
@@ -43,5 +43,3 @@ class App
         }
     }
 }
-
-?>
