@@ -9,12 +9,23 @@ class Router
     static private $default;
     static private $host;
     
+    /**
+     * Loads the routes file
+     * stores the host name in $host
+     * @return void
+     */
     static public function load()
     {
         require_once APP . 'Routes.php';
         self::$host = Config::get('app.Host');
     }
 
+    /**
+     * Add a route to the application
+     * @param string $method the authorized HTTP method for this route
+     * @param array $param associative array containing url, controller and action for the route
+     * @return void
+     */
     static public function register($method, $param)
     {
         if (!in_array($method, Request::$authorizedMethods)){
@@ -32,6 +43,11 @@ class Router
         self::$routes[$method][] = $route;
     }
 
+    /**
+     * Add a fallback route used if the requested URL is not registred as a route
+     * @param array $param associative array containing controller and action for the route
+     * @return void
+     */
     static public function fallback($param)
     {
         if (!isset($param['controller']) | !isset($param['action'])) {
@@ -43,9 +59,14 @@ class Router
 
     }
 
-    static private function parseUrl($url)
+    /**
+     * Parses the route URI into a regex pattern
+     * @param string $url the URI to parse
+     * @return string the match pattern for the URI (regex)
+     */
+    static private function parseUrl($uri)
     {
-        $parts = explode('/', $url);
+        $parts = explode('/', $uri);
         unset($parts[0]);
         $parsed['pattern'] = '#^\\/';
         $parsed['params']  = array();
@@ -65,6 +86,10 @@ class Router
         return $parsed;
     }
 
+    /**
+     * Dumps all registred routes (for debugging purposes)
+     * @return void
+     */
     static public function dumpRoutes()
     {
         echo '<pre>';
@@ -78,6 +103,10 @@ class Router
         echo '</pre>';
     }
 
+    /**
+     * Gets the requested URI and calls the proper controller and action
+     * @return void
+     */
     static public function dispatch()
     {
         $request = Request::getURI();

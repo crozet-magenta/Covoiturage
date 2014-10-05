@@ -16,7 +16,6 @@ Router::register('GET', ['url'        => '/Hello/{?name}',
                          'action'     => 'hello'
                 ]);
 
-Router::fallback(['url'        => '/Accueil',
-                  'controller' => 'Main',
+Router::fallback(['controller' => 'Main',
                   'action'     => 'fallback'
                 ]);
