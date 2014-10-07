@@ -12,10 +12,10 @@ class App
     static function run()
     {
         self::checkVersion();
-        self::setErrorMode();
         self::loadCore();
+        self::setErrorMode();
 
-        Router::Dispatch();
+        Router::dispatch();
     }
 
     /**
@@ -25,8 +25,9 @@ class App
     static private function loadCore()
     {
         require_once CORE . 'Config.php';
-        require_once CORE . 'Router.php';
         require_once CORE . 'Request.php';
+        require_once CORE . 'Url.php';
+        require_once CORE . 'Router.php';
 
         Config::load();
         Router::load();

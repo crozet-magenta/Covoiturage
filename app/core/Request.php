@@ -57,31 +57,4 @@ class Request
         return self::getMethod() == 'DELETE';
     }
 
-    /**
-     * Get the full requested URL with GET parameters
-     * @return string the URL
-     */
-    static public function getFull()
-    {
-        return 'http://' . Config::get('app.Host') . $_SERVER['REQUEST_URI'];
-    }
-
-    /**
-     * Get the full requested URL without GET parameters
-     * @return string the URL
-     */
-    static public function getClean()
-    {
-        return explode('?', self::getFull())[0];
-    }
-
-    /**
-     * Gets the requested URL without domain and GET parameters
-     * @return string the URI
-     */
-    static public function getURI()
-    {
-        return explode('?', $_SERVER['REQUEST_URI'])[0] . '/';
-    }
-
 }

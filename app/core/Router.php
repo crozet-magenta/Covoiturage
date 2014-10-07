@@ -7,7 +7,6 @@ class Router
 {
     static private $routes;
     static private $default;
-    static private $host;
     
     /**
      * Loads the routes file
@@ -17,7 +16,6 @@ class Router
     static public function load()
     {
         require_once APP . 'Routes.php';
-        self::$host = Config::get('app.Host');
     }
 
     /**
@@ -70,15 +68,22 @@ class Router
         unset($parts[0]);
         $parsed['pattern'] = '#^\\/';
         $parsed['params']  = array();
+        $parsed['par']  = ['needed' => array(), 'optional' => array()];
         foreach ($parts as $part) {
-            if ($part[0] != '{') {
+            if (strlen($part) < 3) {
                 $parsed['pattern'].= $part . '\\/';
-            } else if ($part[1] != '?') {
-                $parsed['pattern'] .= '(\w*)\\/';
-                $parsed['params'][] = substr($part, 1, -1);
             } else {
-                $parsed['pattern'] .= '(?:(\w*)\\/)?';
-                $parsed['params'][] = substr($part, 2, -1);
+                if ($part[0] != '{') {
+                    $parsed['pattern'].= $part . '\\/';
+                } else if ($part[1] != '?') {
+                    $parsed['pattern'] .= '([\w-]*)\\/';
+                    $parsed['params'][] = substr($part, 1, -1);
+                    $parsed['par']['needed'][] = substr($part, 1, -1);
+                } else {
+                    $parsed['pattern'] .= '(?:([\w-]*)\\/)?';
+                    $parsed['params'][] = substr($part, 2, -1);
+                    $parsed['par']['optional'][] = substr($part, 2, -1);
+                }
             }
             
         }
@@ -96,11 +101,16 @@ class Router
         foreach (self::$routes as $method => $routes) {
             echo $method . ' routes : <br>';
             foreach ($routes as $route) {
-                echo "- {$route['url']} => {$route['controller']}@{$route['action']}(" . implode(',', $route['params']) . ")<br>";
+                echo "- {$route['url']} (-- {$route['pattern']} --)=> {$route['controller']}@{$route['action']}(" . implode(',', $route['params']) . ")<br>";
             }
             echo '<br>';
         }
         echo '</pre>';
+    }
+
+    static public function getRawRoutes()
+    {
+        return self::$routes;
     }
 
     /**
@@ -109,7 +119,7 @@ class Router
      */
     static public function dispatch()
     {
-        $request = Request::getURI();
+        $request = Url::getURI();
         $method  = Request::getMethod();
         foreach (self::$routes[$method] as $route) {
             preg_match($route['pattern'], $request, $params);
