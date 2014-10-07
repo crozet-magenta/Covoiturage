@@ -17,12 +17,17 @@ soit vous passez sur un linux à jour, soit vous installez php 5.5 via les dép�
 
 ##Todo
 ####Pour la structure
-- [ ] Gestion des requêtes
+- [x] Gestion des requêtes
     - [x] Parseur
     - [x] Méthode
-    - [ ] Generateur d'URL
 - [x] Routeur
+    - [x] Enregistrement d'URL
+    - [x] Dispatcheur
+- [x] Generateur d'URL
 - [ ] Class autoloader
+    - [ ] Models
+    - [ ] Views
+    - [x] Controllers
 - [x] Gestion de config
 
 ####Pour le reste
