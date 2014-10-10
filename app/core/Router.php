@@ -27,10 +27,20 @@ class Router
     static public function register($method, $param)
     {
         if (!in_array($method, Request::$authorizedMethods)){
-            trigger_error('Invalid method provided in Router::register()', E_USER_ERROR);
+            trigger_error('Invalid method provided in Router::register() expecting one of ' . implode(', ', Request::$authorizedMethods), E_USER_ERROR);
         }
         if (!isset($param['url']) | !isset($param['controller']) | !isset($param['action'])) {
             trigger_error('Missing parameters for Router::register()', E_USER_ERROR);
+        }
+        if (!file_exists(APP . 'controllers/' . $param['controller'] . 'Controller.php')) {
+            trigger_error('File ' . $param['controller'] . 'Controller.php does not exist in ' . APP . 'controllers/' , E_USER_ERROR);
+        }
+        include_once APP . 'controllers/' . $param['controller'] . 'Controller.php';
+        if (!class_exists($param['controller'])) {
+            trigger_error('Controller ' . $param['controller'] . 'does not exist', E_USER_ERROR);
+        }
+        if (!method_exists($param['controller'], $param['action'])) {
+            trigger_error('Controller' . $param['controller'] . 'has no method ' . $param['action'], E_USER_ERROR);
         }
 
         $route               = self::parseUrl($param['url']);
@@ -127,7 +137,6 @@ class Router
                 unset($params[0]);
                 $controller = $route['controller'];
                 $action = $route['action'];
-                include APP . 'controllers/' . $controller . 'Controller.php';
                 $class = new $controller();
                 call_user_func_array([$class, $action], $params);
                 return;
@@ -136,7 +145,6 @@ class Router
         if (!empty(self::$default)) {
             $controller = self::$default['controller'];
             $action = self::$default['action'];
-            include APP . 'controllers/' . $controller . 'Controller.php';
             $class = new $controller();
             call_user_func([$class, $action]);
         }

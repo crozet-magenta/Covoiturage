@@ -33,13 +33,18 @@ class Url
         return explode('?', $_SERVER['REQUEST_URI'])[0] . '/';
     }
 
+    /**
+     * returns the full url to a given uri
+     * @param string $uri the target uri
+     * @return string the full url
+     */
     static public function to($uri)
     {
         $host = Config::get('app.Host');
         return 'http://' . $host . $uri;
     }
 
-    static public function route($to, $params = array())
+    static public function route($to, array $params = array())
     {
         $tmp        = explode('@', $to);
         $controller = $tmp[0];

@@ -7,6 +7,6 @@
     <link rel="stylesheet" href="">
 </head>
 <body>
-    <?php echo $content ?>
+    @yield('content')
 </body>
 </html>
