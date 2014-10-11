@@ -5,10 +5,7 @@
 */
 class View
 {
-    static private $content;
     static private $template;
-    static private $data;
-
     static public function render($name, array $data = array())
     {
         
@@ -16,15 +13,31 @@ class View
         if (!file_exists(APP . 'views/' . $name . 'View.php')) {
             trigger_error('File ' . $name . 'View.php does not exist in ' . APP . 'views/' , E_USER_ERROR);
         }
-        self::$content = file_get_contents(APP . 'views/' . $name . 'View.php');
-        self::$data = $data;
+        extract($data);
 
-        self::parse();
+        ob_start();
+            include APP . 'views/' . $name . 'View.php';
+        $content = ob_get_clean();
+
+        if (!empty(self::$template)) {
+            self::$template = str_replace('@content', $content, self::$template);
+            echo self::$template;
+        } else {
+            echo $content;
+        }
+        
     }
 
-    static public function parse()
+    static public function addTemplate($name, array $data = array())
     {
-        preg_match("/@section\('(.*)'\)(.*)@stop/s", self::$content, $out);
-        var_dump($out);
+        $name = str_replace('.', '/', $name);
+        if (!file_exists(APP . 'views/' . $name . 'View.php')) {
+            trigger_error('File ' . $name . 'View.php does not exist in ' . APP . 'views/' , E_USER_ERROR);
+        }
+        extract($data);
+
+        ob_start();
+            include APP . 'views/' . $name . 'View.php';
+        self::$template = ob_get_clean();
     }
 }

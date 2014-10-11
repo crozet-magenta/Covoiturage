@@ -3,10 +3,10 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>VRoom</title>
+    <title>VRoom ~ <?php echo $title ?></title>
     <link rel="stylesheet" href="">
 </head>
 <body>
-    @yield('content')
+    @content
 </body>
 </html>

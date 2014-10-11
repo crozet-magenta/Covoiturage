@@ -16,5 +16,5 @@ if (Config::get('app.Debug')) {
         return sprintf("%.{$decimals}f", $bytes / pow(1024, $factor)) . ' ' . @$sz[$factor];
     }
     define('STOP', microtime(true));
-    echo 'Page generated in ' . number_format(round(STOP - START,3)*1000, 0, ',', ' ') . ' ms<br> (memory usage : ' . human_filesize(memory_get_usage()) . ')<br>';
+    echo '<p>Page generated in ' . number_format(round(STOP - START,3)*1000, 0, ',', ' ') . ' ms<br>(memory usage : ' . human_filesize(memory_get_usage()) . ')</p>';
 }
