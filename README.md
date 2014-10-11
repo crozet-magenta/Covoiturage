@@ -26,9 +26,12 @@ soit vous passez sur un linux à jour, soit vous installez php 5.5 via les dép�
 - [x] Generateur d'URL
 - [ ] Class autoloader
     - [ ] Models
-    - [ ] Views
+    - [x] Views
     - [x] Controllers
 - [x] Gestion de config
+- [x] Vues
+    - [x] Rendu des vues simples
+    - [x] Rendu des vues avec un template
 
 ####Pour le reste
 - [ ] faire un design
