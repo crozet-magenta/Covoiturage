@@ -33,6 +33,7 @@ class App
 
         Config::load();
         Router::load();
+        spl_autoload_register('App::ClassLoader');
     }
 
     /**
@@ -60,5 +61,10 @@ class App
             ini_set('display_errors',0);
             ini_set('display_startup_errors',0);
         }
+    }
+
+    static private function ClassLoader($classModel)
+    {
+        require APP . 'model/' . $classModel . 'Model.php';
     }
 }

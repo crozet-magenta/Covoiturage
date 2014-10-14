@@ -3,7 +3,7 @@
 /**
 * testing class
 */
-class Test
+class TestController
 {
     
     function hello($name = 'world')

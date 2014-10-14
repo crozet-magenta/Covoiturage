@@ -2,20 +2,20 @@
 // Router::register('GET', ['url' => '/foo/{needed}/{?optional}', 'controller' => 'foo', 'action' => 'bar']);
 
 Router::register('GET', ['url'        => '/Accueil',
-                         'controller' => 'Main',
+                         'controller' => 'MainController',
                          'action'     => 'home'
                 ]);
 
 Router::register('GET', ['url'        => '/',
-                         'controller' => 'Main',
+                         'controller' => 'MainController',
                          'action'     => 'home'
                 ]);
 
 Router::register('GET', ['url'        => '/Hello/{?name}',
-                         'controller' => 'Test',
+                         'controller' => 'TestController',
                          'action'     => 'hello'
                 ]);
 
-Router::fallback(['controller' => 'Main',
+Router::fallback(['controller' => 'MainController',
                   'action'     => 'fallback'
                 ]);
