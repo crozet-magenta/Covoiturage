@@ -10,13 +10,13 @@ class View
     {
         
         $name = str_replace('.', '/', $name);
-        if (!file_exists(APP . 'views/' . $name . 'View.php')) {
-            trigger_error('File ' . $name . 'View.php does not exist in ' . APP . 'views/' , E_USER_ERROR);
+        if (!file_exists(APP . 'views/' . $name . '.php')) {
+            trigger_error('File ' . $name . '.php does not exist in ' . APP . 'views/' , E_USER_ERROR);
         }
         extract($data);
 
         ob_start();
-            include APP . 'views/' . $name . 'View.php';
+            include APP . 'views/' . $name . '.php';
         $content = ob_get_clean();
 
         if (!empty(self::$template)) {
@@ -31,13 +31,13 @@ class View
     static public function addTemplate($name, array $data = array())
     {
         $name = str_replace('.', '/', $name);
-        if (!file_exists(APP . 'views/' . $name . 'View.php')) {
-            trigger_error('File ' . $name . 'View.php does not exist in ' . APP . 'views/' , E_USER_ERROR);
+        if (!file_exists(APP . 'views/' . $name . '.php')) {
+            trigger_error('File ' . $name . '.php does not exist in ' . APP . 'views/' , E_USER_ERROR);
         }
         extract($data);
 
         ob_start();
-            include APP . 'views/' . $name . 'View.php';
+            include APP . 'views/' . $name . '.php';
         self::$template = ob_get_clean();
     }
 }

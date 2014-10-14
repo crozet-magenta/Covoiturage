@@ -8,9 +8,7 @@ class MainController
     public function home()
     {
         $title = 'Accueil du site';
-        $data = Main::test();
-        View::addTemplate('base', compact('title'));
-        View::render('Main.home', compact('data'));
+        View::render('baseView', compact('title'));
     }
 
     public function fallback()

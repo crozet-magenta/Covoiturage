@@ -10,12 +10,3 @@ Router::register('GET', ['url'        => '/',
                          'controller' => 'MainController',
                          'action'     => 'home'
                 ]);
-
-Router::register('GET', ['url'        => '/Hello/{?name}',
-                         'controller' => 'TestController',
-                         'action'     => 'hello'
-                ]);
-
-Router::fallback(['controller' => 'MainController',
-                  'action'     => 'fallback'
-                ]);
