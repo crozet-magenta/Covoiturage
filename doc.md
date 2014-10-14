@@ -19,11 +19,15 @@ Le point d'entrée du site est le fichier index.php qui se trouve à la racine.
 4. le controlleur demande le rendu de la vue en lui fournissant les données traitées
 5. la vue est envoyée à l'utilisateur
 
-##3. Conventions de codage
+##3. Conventions de codage et de nommage
 - un controlleur = une classe = un fichier PHP
 - un model = une classe = un fichier PHP
-- les fichiers de controllers ont le nom du controller suivi de 'Controller'  (`NameController.php`)
-- les fichiers de models ont le nom du model suivi de 'Model' (`NameModel.php`)
+- noms de classe : majuscule initiale et à chaque mot ex : `class DummyController`
+- noms de fonction : minuscule initiale et majuscule à chaque mot ex : `function dummyFunction ()`
+- les classes controller sont nommées de la manière suivante : `NameController`
+- les classes models utilisent le même nom que la table mysql qui leur est assossiée
+- les fichiers de controllers ont le nom du controller ex : `NameController.php`
+- les fichiers de models ont le nom du model suivi de model ex : `NameModel.php`
 
 ##4. les classes
 - **App :** La classe app inclut les fichiers nécessaires au coeur de l'application

@@ -24,8 +24,8 @@ soit vous passez sur un linux à jour, soit vous installez php 5.5 via les dép�
     - [x] Enregistrement d'URL
     - [x] Dispatcheur
 - [x] Generateur d'URL
-- [ ] Class autoloader
-    - [ ] Models
+- [x] Class autoloader
+    - [x] Models
     - [x] Views
     - [x] Controllers
 - [x] Gestion de config
