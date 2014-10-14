@@ -29,6 +29,7 @@ class App
         require_once CORE . 'Url.php';
         require_once CORE . 'View.php';
         require_once CORE . 'Router.php';
+        require_once CORE . 'Model.php';
 
         Config::load();
         Router::load();
