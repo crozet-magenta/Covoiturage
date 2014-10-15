@@ -13,6 +13,10 @@ class MainController
 
     public function fallback()
     {
-        echo 'this page does not exist<br>';
+        header("HTTP/1.0 999 Not Found");
+
+        $title = 'Page not found';
+        View::addTemplate('baseView', compact('title'));
+        View::render('error.404');
     }
 }
