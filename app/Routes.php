@@ -6,9 +6,9 @@ Router::register('GET', ['url'        => '/',
                          'action'     => 'home'
                 ]);
 
-Router::register('GET', ['url'        => '/assets/css/style.css',
-                         'controller' => 'MainController',
-                         'action'     => 'home'
+Router::register('GET', ['url'        => '/autocomplete',
+                         'controller' => 'ToolsController',
+                         'action'     => 'autocomplete'
                 ]);
 
 Router::fallback(['controller' => 'MainController',

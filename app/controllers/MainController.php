@@ -13,7 +13,7 @@ class MainController
 
     public function fallback()
     {
-        header("HTTP/1.0 999 Not Found");
+        header("HTTP/1.0 404 Not Found");
 
         $title = 'Page not found';
         View::addTemplate('baseView', compact('title'));

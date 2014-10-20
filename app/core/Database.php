@@ -3,11 +3,11 @@
 /**
 * mini orm
 */
-class Model
+class Database
 {
     static public $PDO;
 
-    public function connect()
+    static public function connect()
     {
         $host  = Config::get('Database.Host');
         $pass  = Config::get('Database.Pass');
@@ -15,11 +15,16 @@ class Model
         $dbase = Config::get('Database.Database');
         
         try {
-            $dbh = new PDO('mysql:host=' . $host . ';dbname=' . $dbase, $user, $pass);
+            self::$PDO = new PDO('mysql:host=' . $host . ';dbname=' . $dbase, $user, $pass);
+            self::$PDO->exec('SET NAMES utf8');
         } catch (PDOException $e) {
             trigger_error('Unable to connect to database : ' . $e->getMessage(), E_USER_ERROR);
         }
     }
 
+    static public function disconnect()
+    {
+        self::$PDO = null;
+    }
     
 }

@@ -53,3 +53,11 @@ section {
     text-align: justify;
     margin: 0 2.2%;
 }
+
+input[type=date],
+input[type=text] {
+    border: 1px solid #aaa;
+    width: 200px;
+    height: 25px;
+    padding: 0;
+}

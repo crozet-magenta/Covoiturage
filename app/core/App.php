@@ -29,7 +29,7 @@ class App
         require_once CORE . 'Url.php';
         require_once CORE . 'View.php';
         require_once CORE . 'Router.php';
-        require_once CORE . 'Model.php';
+        require_once CORE . 'Database.php';
 
         Config::load();
         Router::load();
@@ -65,6 +65,6 @@ class App
 
     static private function ClassLoader($classModel)
     {
-        require APP . 'model/' . $classModel . 'Model.php';
+        require APP . 'models/' . $classModel . 'Model.php';
     }
 }

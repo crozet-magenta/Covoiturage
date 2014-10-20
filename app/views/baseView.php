@@ -4,8 +4,12 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>VRoom</title>
-    <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/normalize.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/jquery.css">
+    <script src="/assets/js/jquery.js"></script>
+    <script src="/assets/js/jqueryui.js"></script>
+    <script src="/assets/js/app.js"></script>
 </head>
 <body>
     <div class="container">
@@ -23,8 +27,8 @@
         </header>
         <div class="search">
             <form action="#">
-                <input type="text" name="start" placeholder="Ville de départ">
-                <input type="text" name="end" placeholder="Ville d'arrivée">
+                <input type="text" name="start" id="start-city" placeholder="Ville de départ">
+                <input type="text" name="end" id="end-city" placeholder="Ville d'arrivée">
                 <input type="date" name="date" value="<?php echo date('Y-m-d') ?>">
                 <input type="submit" value="Rechercher" class="btn">
             </form>
