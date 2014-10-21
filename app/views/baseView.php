@@ -26,11 +26,12 @@
             </nav>
         </header>
         <div class="search">
-            <form action="#">
-                <input type="text" name="start" id="start-city" placeholder="Ville de départ">
-                <input type="text" name="end" id="end-city" placeholder="Ville d'arrivée">
+            <form action="#" method='post'>
+                <input type="text" name="start" id="start-city" placeholder="Ville / code postal de départ">
+                <input type="text" name="end" id="end-city" placeholder="Ville / code postal d'arrivée">
                 <input type="date" name="date" value="<?php echo date('Y-m-d') ?>">
                 <input type="submit" value="Rechercher" class="btn">
+                <datalist id="cities"></datalist>
             </form>
         </div>
         <div class="main">

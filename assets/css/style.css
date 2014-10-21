@@ -54,10 +54,23 @@ section {
     margin: 0 2.2%;
 }
 
+input[list],
 input[type=date],
-input[type=text] {
+input[type=text],
+input[type=submit] {
+    box-sizing: content-box;
     border: 1px solid #aaa;
-    width: 200px;
     height: 25px;
-    padding: 0;
+    width: 27%;
+    padding: 0 5px;
+}
+
+input[type=date],
+input[type=submit] {
+    width: 17.75%;
+}
+
+.search {
+    text-align: center;
+    
 }

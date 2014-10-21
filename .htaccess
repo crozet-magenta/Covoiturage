@@ -1,3 +1,5 @@
+php_value date.timezone "Europe/Paris"
+
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.+)/$ $1 [R=302,L]
