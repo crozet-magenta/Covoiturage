@@ -28,11 +28,10 @@ class ToolsController
         Database::connect();
         $data = Cities::getCompletion($_GET['term']);
         Database::disconnect();
-
-        for ($i=0; $i < sizeof($data); $i++) { 
-            $cities[$i] = str_replace("\r", '', $data[$i]['full_name'] . ' (' . $data[$i]['zip_code'] . ')');
+        foreach ($data as $city) {
+            $cities[] = $city[0];
         }
-
+        //var_dump($data);
         header('Content-Type: application/json');
         echo json_encode($cities);
         die();

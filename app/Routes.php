@@ -11,6 +11,17 @@ Router::register('GET', ['url'        => '/autocomplete',
                          'action'     => 'autocomplete'
                 ]);
 
+Router::register('POST', ['url'        => '/search/{start}/{end}/{date}',
+                          'controller' => 'SearchController',
+                          'action'     => 'search'
+                ]);
+
+Router::register('GET', ['url'        => '/search/{start}/{end}/{date}',
+                          'controller' => 'SearchController',
+                          'action'     => 'search'
+                ]);
+
+
 Router::fallback(['controller' => 'MainController',
                   'action'     => 'fallback'
                 ]);
