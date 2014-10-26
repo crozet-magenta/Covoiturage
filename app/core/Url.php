@@ -12,7 +12,7 @@ class Url
      */
     static public function getFull()
     {
-        return 'http://' . Config::get('app.Host') . $_SERVER['REQUEST_URI'];
+        return 'https://' . Config::get('app.Host') . $_SERVER['REQUEST_URI'];
     }
 
     /**
@@ -41,7 +41,7 @@ class Url
     static public function to($uri)
     {
         $host = Config::get('app.Host');
-        return 'http://' . $host . $uri;
+        return 'https://' . $host . $uri;
     }
 
     static public function redirect($to)
