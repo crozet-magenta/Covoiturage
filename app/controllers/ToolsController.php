@@ -6,7 +6,7 @@
 class ToolsController
 {
     /* // for datalist only 
-    function autocomplete()
+    public function autocomplete()
     {
         Database::connect();
         $data = Cities::getCompletion($_GET['term']);
@@ -23,7 +23,7 @@ class ToolsController
     */
 
     // for jquery autocomplete
-    function autocomplete()
+    public function autocomplete()
     {
         Database::connect();
         $data = Cities::getCompletion($_GET['term']);

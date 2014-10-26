@@ -44,6 +44,12 @@ class Url
         return 'http://' . $host . $uri;
     }
 
+    static public function redirect($to)
+    {
+        echo '<meta http-equiv="refresh" content="0;URL=' . Url::to($to) . '">';
+        die();
+    }
+
     static public function route($to, array $params = array())
     {
         $tmp        = explode('@', $to);

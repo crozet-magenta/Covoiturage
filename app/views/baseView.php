@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>VRoom</title>
+    <title>VRoom, le covoiturage facile ~ <?= $title ?></title>
     <link rel="stylesheet" href="/assets/css/normalize.css">
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/jquery.css">
@@ -20,7 +20,7 @@
                     <span class="btn"><a href="#">Proposer un voyage</a></span>
                 </div>
                 <div class="right">
-                    <span class="btn"><a href="#">Inscription</a></span>
+                    <span class="btn"><a href="<?= URL::to('/Register')?>">Inscription</a></span>
                     <span class="btn"><a href="#">Connexion</a></span>
                 </div>
             </nav>
@@ -29,7 +29,7 @@
             <form action="#" method='post' id='search'>
                 <input required type="text" name="start" id="start-city" placeholder="Ville / code postal de départ">
                 <input required type="text" name="end" id="end-city" placeholder="Ville / code postal d'arrivée">
-                <input required type="text" name="date" id="date" value="<?php echo date('d-m-Y') ?>">
+                <input required type="text" name="date" id="date" value="<?= date('d-m-Y') ?>">
                 <input type="submit" value="Rechercher" class="btn">
                 <datalist id="cities"></datalist>
             </form>

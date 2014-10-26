@@ -6,7 +6,7 @@
 class SearchController
 {
     
-    function search($start, $end, $date)
+    public function search($start, $end, $date)
     {
         //var_dump($start, $end, $date);
         Database::connect();
