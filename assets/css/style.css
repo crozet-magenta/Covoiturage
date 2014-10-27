@@ -133,3 +133,7 @@ h1:after {
 .center-t {
     text-align: center;
 }
+
+.main {
+    padding: 50px;
+}

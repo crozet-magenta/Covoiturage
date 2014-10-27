@@ -32,6 +32,11 @@ Router::register('GET', ['url'        => '/Register/Success',
                           'action'     => 'afterStore'
                 ]);
 
+Router::register('GET', ['url'        => '/Validate/{code}',
+                          'controller' => 'UserController',
+                          'action'     => 'validate'
+                ]);
+
 Router::register('GET', ['url'        => '/Login',
                           'controller' => 'UserController',
                           'action'     => 'login'

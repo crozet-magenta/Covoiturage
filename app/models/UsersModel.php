@@ -32,4 +32,18 @@ class Users
         $num = $request->fetch()['num'];
         return (intval($num) === 1);
     }
+
+    static public function validate($code)
+    {
+        $request = Database::$PDO->prepare("SELECT email, name from `users` WHERE  validation_code = ?");
+        $request->execute([$code]);
+        $data = $request->fetch();
+        $request = Database::$PDO->prepare("UPDATE `users` SET `validated` = 1 WHERE  email = ? AND validation_code = ?");
+        $request->execute([$data['email'], $code]);
+        if ($request->rowCount() == 1) {
+            return $data;
+        } else {
+            return false;
+        }
+    }
 }

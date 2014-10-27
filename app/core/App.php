@@ -74,10 +74,29 @@ class App
 
     static public function getCSRF()
     {
-        if (!isset($_SESSION['__CSRF']) || (($_SESSION['__GENERATED'] + 300) < microtime(true))) {
+        if (!isset($_SESSION['__CSRF']) || (($_SESSION['__GENERATED'] + 3000) < microtime(true))) {
             $_SESSION['__CSRF'] = sha1(microtime(true)) . uniqid();
             $_SESSION['__GENERATED'] = microtime(true);
         }
         return $_SESSION['__CSRF'];
+    }
+
+    static public function sendMail($from, $to, $subject, $view, $data)
+    {
+        $headers = 'From: ' . $from . "\r\n";
+        $headers .= "MIME-Version: 1.0\r\n";
+        $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
+
+        $viewName = str_replace('.', '/', $view);
+        if (!file_exists(APP . 'views/' . $viewName . '.php')) {
+            trigger_error('File ' . $viewName . '.php does not exist in ' . APP . 'views/' , E_USER_ERROR);
+        }
+        extract($data);
+
+        ob_start();
+            include APP . 'views/' . $viewName . '.php';
+        $message = ob_get_clean();
+
+        return mail($to, '=?utf-8?B?'.base64_encode($subject), $message, $headers);
     }
 }

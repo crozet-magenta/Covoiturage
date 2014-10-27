@@ -69,8 +69,13 @@ class UserController
             Url::redirect('/Register');
         } else {
             $validated['validation_code'] = sha1(microtime(true));
+            $validation_code = $validated['validation_code'];
+            $user = $validated['name'];
+
+            App::sendmail('noreply@vroom.ovh', $validated['email'], 'Confirmation d\'inscription', 'email.register', compact('user', 'validation_code'));
             Users::add($validated);
             $_SESSION['newEmail'] = $validated['email'];
+            
 
             Database::disconnect();
             Url::redirect('/Register/Success');
@@ -80,14 +85,43 @@ class UserController
     public function afterStore()
     {
         $email = $_SESSION['newEmail'];
+        
         unset($_SESSION['newEmail']);
         $title = 'Inscription effectuée';
         View::addTemplate('baseView', compact('title'));
         view::render('user.afterStore', compact('email'));
     }
 
+    public function validate($code)
+    {
+        View::addTemplate('baseView', compact('title'));
+        Database::connect();
+        $data = Users::validate($code);
+        if ($data !== false) {
+            $email = $data['email'];
+            $user = $data['name'];
+            App::sendMail('noreply@vroom.ovh', $email, 'Inscription validée', 'email.validate', compact('user'));
+            view::render('user.validateOK');
+        } else {
+            View::render('user.validateFail');
+        }
+        Database::disconnect();
+    }
+
     public function login()
     {
-
+        $title = 'Connexion';
+        View::addTemplate('baseView', compact('title'));
+        $err = $errMsg = array();
+        if (isset($_SESSION['errors'])) {
+            foreach ($_SESSION['errors'] as $key => $value) {
+                $err[$key] = 'class="has-error"';
+                $errMsg[$key] = $value;
+            }
+            unset($_SESSION['errors']);
+        }
+        $errorClass = new Collection($err);
+        $errorMsg = new Collection($errMsg);
+        View::render('user.login', compact('errorClass', 'errorMsg'));
     }
 }

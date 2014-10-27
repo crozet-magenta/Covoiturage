@@ -21,7 +21,7 @@
                 </div>
                 <div class="right">
                     <span class="btn"><a href="<?= URL::to('/Register')?>">Inscription</a></span>
-                    <span class="btn"><a href="#">Connexion</a></span>
+                    <span class="btn"><a href="<?= URL::to('/Login')?>">Connexion</a></span>
                 </div>
             </nav>
         </header>
