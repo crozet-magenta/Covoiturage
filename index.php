@@ -17,4 +17,5 @@ if (Config::get('app.Debug')) {
     }
     define('STOP', microtime(true));
     echo '<p>Page generated in ' . number_format(round(STOP - START,3)*1000, 0, ',', ' ') . ' ms<br>(memory usage : ' . human_filesize(memory_get_usage()) . ')</p>';
+    xdebug_dump_superglobals() ;
 }

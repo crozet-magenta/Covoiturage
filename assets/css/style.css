@@ -65,11 +65,17 @@ input {
     width: 400px;
     padding: 0 5px;
     margin-top: 5px;
+    line-height: 25px;
 }
 
 input[type=text]#date,
 input[type=submit] {
     width: 198px;
+}
+
+input[type=submit] {
+    border-color: #096079;
+    background-color: #3498db;
 }
 
 .search {
@@ -106,7 +112,7 @@ input[type=submit] {
     width: 400px;
 }
 
-.form-expired {
+.form-error {
     text-align: center;
     display: block;
     margin: auto;
@@ -136,4 +142,17 @@ h1:after {
 
 .main {
     padding: 50px;
+}
+
+a.btn {
+    box-sizing: border-box;
+    border: 1px solid #096079;
+    height: 25px;
+    width: 198px;
+    padding: 0 5px;
+    margin-top: 5px;
+    display: inline-block;
+    line-height: 25px;
+    text-align: center;
+    background-color: #3498db;
 }

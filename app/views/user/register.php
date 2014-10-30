@@ -1,7 +1,7 @@
 <h1>Inscription</h1>
 
 <form method="POST" action="<?= URL::to('/Register') ?>">
-    <span class="form-expired"><?= $errorMsg['CSRF']?></span>
+    <span class="form-error"><?= $errorMsg['CSRF']?></span>
     <div class="form-group">
         <label for="surname" <?= $errorClass['surname'] ?>>Nom :</label><input type="text" name="surname" id="surname" placeholder="Nom" required>
         <span class="error-msg"><?= $errorMsg['surname'] ?></span>

@@ -35,15 +35,30 @@ class Users
 
     static public function validate($code)
     {
-        $request = Database::$PDO->prepare("SELECT email, name from `users` WHERE  validation_code = ?");
+        $request = Database::$PDO->prepare("SELECT email, name from `users` WHERE  validation_code = ? AND validated = 0");
         $request->execute([$code]);
         $data = $request->fetch();
-        $request = Database::$PDO->prepare("UPDATE `users` SET `validated` = 1 WHERE  email = ? AND validation_code = ?");
-        $request->execute([$data['email'], $code]);
+        $newCode = sha1(microtime(true));
+        $request = Database::$PDO->prepare("UPDATE `users` SET `validated` = 1, validation_code = ? WHERE  email = ? AND validation_code = ?");
+        $request->execute([$newCode, $data['email'], $code]);
         if ($request->rowCount() == 1) {
             return $data;
         } else {
             return false;
         }
+    }
+
+    static public function getPassword($email)
+    {
+        $request = Database::$PDO->prepare("SELECT password from `users` WHERE email = ?");
+        $request->execute([$email]);
+        return $request->fetch()['password'];
+    }
+
+    static public function getUser($email)
+    {
+        $request = Database::$PDO->prepare("SELECT * from `users` WHERE email = ?");
+        $request->execute([$email]);
+        return $request->fetch(PDO::FETCH_ASSOC);
     }
 }

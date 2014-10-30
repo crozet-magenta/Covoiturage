@@ -112,16 +112,29 @@ class UserController
     {
         $title = 'Connexion';
         View::addTemplate('baseView', compact('title'));
-        $err = $errMsg = array();
+        $errMsg = array();
         if (isset($_SESSION['errors'])) {
-            foreach ($_SESSION['errors'] as $key => $value) {
-                $err[$key] = 'class="has-error"';
-                $errMsg[$key] = $value;
-            }
+            $errMsg['login'] = $_SESSION['errors']['login'];
             unset($_SESSION['errors']);
         }
-        $errorClass = new Collection($err);
         $errorMsg = new Collection($errMsg);
-        View::render('user.login', compact('errorClass', 'errorMsg'));
+        View::render('user.login', compact('errorMsg'));
+    }
+
+    public function loginCheck()
+    {
+        $email = $_POST['email'];
+        $pass  = $_POST['password'];
+        if (!Auth::attempt($email, $pass)) {
+            $_SESSION['errors']['login'] = 'La combinaison email / mot de passe n\'a pas été reconnue';
+            URL::redirect('/Login');
+        } else {
+            Url::redirect('/');
+        }
+    }
+
+    public function resetPassword()
+    {
+
     }
 }

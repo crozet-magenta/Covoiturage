@@ -17,7 +17,7 @@ Router::register('GET', ['url'        => '/',
 =            User routes            =
 ===================================*/
 
-Router::register('GET', ['url'        => '/Register',
+Router::register('GET', ['url'         => '/Register',
                           'controller' => 'UserController',
                           'action'     => 'register'
                 ]);
@@ -27,19 +27,29 @@ Router::register('POST', ['url'        => '/Register',
                           'action'     => 'store'
                 ]);
 
-Router::register('GET', ['url'        => '/Register/Success',
+Router::register('GET', ['url'         => '/Register/Success',
                           'controller' => 'UserController',
                           'action'     => 'afterStore'
                 ]);
 
-Router::register('GET', ['url'        => '/Validate/{code}',
+Router::register('GET', ['url'         => '/Validate/{code}',
                           'controller' => 'UserController',
                           'action'     => 'validate'
                 ]);
 
-Router::register('GET', ['url'        => '/Login',
+Router::register('GET', ['url'         => '/Login',
                           'controller' => 'UserController',
                           'action'     => 'login'
+                ]);
+
+Router::register('POST', ['url'        => '/Login',
+                          'controller' => 'UserController',
+                          'action'     => 'loginCheck'
+                ]);
+
+Router::register('GET', ['url'         => '/ResetPassword',
+                          'controller' => 'UserController',
+                          'action'     => 'resetPassword'
                 ]);
 /*-----  End of User routes  ------*/
 
@@ -54,7 +64,7 @@ Router::register('POST', ['url'        => '/search/{start}/{end}/{date}',
                           'action'     => 'search'
                 ]);
 
-Router::register('GET', ['url'        => '/search/{start}/{end}/{date}',
+Router::register('GET', ['url'         => '/search/{start}/{end}/{date}',
                           'controller' => 'SearchController',
                           'action'     => 'search'
                 ]);

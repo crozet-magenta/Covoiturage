@@ -32,6 +32,7 @@ class App
         require_once CORE . 'Router.php';
         require_once CORE . 'Database.php';
         require_once CORE . 'Collection.php';
+        require_once CORE . 'Auth.php';
 
         spl_autoload_register('App::ClassLoader');
         Config::load();
@@ -97,6 +98,6 @@ class App
             include APP . 'views/' . $viewName . '.php';
         $message = ob_get_clean();
 
-        return mail($to, '=?utf-8?B?'.base64_encode($subject), $message, $headers);
+        return mail($to, utf8_decode($subject), $message, $headers);
     }
 }
