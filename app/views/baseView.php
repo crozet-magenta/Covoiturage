@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/jquery.css">
     <script src="/assets/js/jquery.js"></script>
-    <script src="/assets/js/jqueryui.js"></script>
-    <script src="/assets/js/app.js"></script>
 </head>
 <body>
     <div class="container">
@@ -38,5 +36,6 @@
             @content
         </div>
     </div>
+    <script src="/assets/js/app.js"></script>
 </body>
 </html>

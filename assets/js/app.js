@@ -15,7 +15,7 @@ $(function() {
     $('#start-city, #end-city').autocomplete({
         source: "/autocomplete",
         minLength: 2,
-        delay: 500,
+        delay: 10,
         autoFocus: true
     });
     $('#search').submit(function() {
