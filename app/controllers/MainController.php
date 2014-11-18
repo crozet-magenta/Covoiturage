@@ -8,7 +8,8 @@ class MainController
     public function home()
     {
         $title = 'Accueil du site';
-        View::render('baseView', compact('title'));
+        View::addTemplate('baseView', compact('title'));
+        View::render('main.home');
     }
 
     public function fallback()

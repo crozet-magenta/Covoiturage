@@ -52,6 +52,42 @@ class Router
     }
 
     /**
+     * Parses the route URI into a regex pattern
+     *
+     * @param string $url the URI to parse
+     *
+     * @return string the match pattern for the URI (regex)
+     */
+    static private function parseUrl($uri)
+    {
+        $parts = explode('/', $uri);
+        unset($parts[0]);
+        $parsed['pattern'] = '#^\\/';
+        $parsed['params'] = [];
+        $parsed['par'] = ['needed' => [], 'optional' => []];
+        foreach ($parts as $part) {
+            if (strlen($part) < 3) {
+                $parsed['pattern'] .= $part . '\\/';
+            } else {
+                if ($part[0] != '{') {
+                    $parsed['pattern'] .= $part . '\\/';
+                } else if ($part[1] != '?') {
+                    $parsed['pattern'] .= '([\w-]*)\\/';
+                    $parsed['params'][] = substr($part, 1, -1);
+                    $parsed['par']['needed'][] = substr($part, 1, -1);
+                } else {
+                    $parsed['pattern'] .= '(?:([\w-]*)\\/)?';
+                    $parsed['params'][] = substr($part, 2, -1);
+                    $parsed['par']['optional'][] = substr($part, 2, -1);
+                }
+            }
+
+        }
+        $parsed['pattern'] .= '$#';
+        return $parsed;
+    }
+
+    /**
      * Add a fallback route used if the requested URL is not registred as a route
      * @param array $param associative array containing controller and action for the route
      * @return void
@@ -63,46 +99,13 @@ class Router
         }
 
         self::$default['controller'] = $param['controller'];
-        self::$default['action']     = $param['action'];
+        self::$default['action'] = $param['action'];
 
     }
 
     /**
-     * Parses the route URI into a regex pattern
-     * @param string $url the URI to parse
-     * @return string the match pattern for the URI (regex)
-     */
-    static private function parseUrl($uri)
-    {
-        $parts = explode('/', $uri);
-        unset($parts[0]);
-        $parsed['pattern'] = '#^\\/';
-        $parsed['params']  = array();
-        $parsed['par']  = ['needed' => array(), 'optional' => array()];
-        foreach ($parts as $part) {
-            if (strlen($part) < 3) {
-                $parsed['pattern'].= $part . '\\/';
-            } else {
-                if ($part[0] != '{') {
-                    $parsed['pattern'].= $part . '\\/';
-                } else if ($part[1] != '?') {
-                    $parsed['pattern'] .= '([\w-]*)\\/';
-                    $parsed['params'][] = substr($part, 1, -1);
-                    $parsed['par']['needed'][] = substr($part, 1, -1);
-                } else {
-                    $parsed['pattern'] .= '(?:([\w-]*)\\/)?';
-                    $parsed['params'][] = substr($part, 2, -1);
-                    $parsed['par']['optional'][] = substr($part, 2, -1);
-                }
-            }
-            
-        }
-        $parsed['pattern'].= '$#';
-        return $parsed;
-    }
-
-    /**
-     * Dumps all registred routes (for debugging purposes)
+     * Dumps all registered routes (for debugging purposes)
+     *
      * @return void
      */
     static public function dumpRoutes()

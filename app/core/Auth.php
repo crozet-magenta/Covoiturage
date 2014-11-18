@@ -5,7 +5,14 @@
 */
 class Auth
 {
-    
+    /**
+     * try to connect a user with given credentials
+     *
+     * @param string $email email to use for login attempt
+     * @param string $pass  pass to use for login attempt
+     *
+     * @return bool result of the login attempt
+     */
     static public function attempt($email, $pass)
     {
         Database::connect();

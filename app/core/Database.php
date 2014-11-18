@@ -7,6 +7,12 @@ class Database
 {
     static public $PDO;
 
+    /**
+     * connect to the database and store the connexion in $PDO.
+     * credentials are retrieved from the config file
+     *
+     * @return void
+     */
     static public function connect()
     {
         $host  = Config::get('Database.Host');
@@ -22,6 +28,10 @@ class Database
         }
     }
 
+    /**
+     * closes the active connexion to the database
+     * @return void
+     */
     static public function disconnect()
     {
         self::$PDO = null;

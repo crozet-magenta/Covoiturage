@@ -1,6 +1,3 @@
-
-
-
 $(function() {
     $("#date").datepicker({
         firstDay: 1 ,
@@ -24,30 +21,4 @@ $(function() {
                                     + $('#end-city').val() + '/'
                                     + $('#date').val());
     })
-})
-
-/*
-window.onload=complete;
-function complete() {
-    document.getElementById('end-city').setAttribute('placeholder', 'Loading...');
-    document.getElementById('start-city').setAttribute('placeholder', 'Loading...');
-    xmlhttp=new XMLHttpRequest();
-    xmlhttp.onreadystatechange=function()
-      {
-      if (xmlhttp.readyState==4 && xmlhttp.status==200)
-        {
-            document.getElementById("cities").innerHTML='';
-            document.getElementById("cities").innerHTML=xmlhttp.responseText;
-            document.getElementById('end-city').setAttribute('placeholder', 'Ville / code postal de départ');
-            document.getElementById('end-city').removeAttribute('disabled');
-
-            document.getElementById('start-city').setAttribute('placeholder', 'Ville / code postal d\'arrivée');
-            document.getElementById('start-city').removeAttribute('disabled');
-        }
-      }
-    xmlhttp.open("GET","/autocomplete?all=true" ,true);
-    xmlhttp.send();
-}
-*/
-
-
+});

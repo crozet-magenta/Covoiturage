@@ -1,5 +1,5 @@
 .container {
-    box-shadow: 0px -5px 12px 4px #555;
+    box-shadow: 0 -5px 12px 4px #555;
     margin: 0 7%;
     padding: 7px;
 }
@@ -35,7 +35,7 @@
 
 
 .nav a:active {
-    border-bottom: 0px;
+    border-bottom: 0;
     top: 5px;
 }
 
@@ -124,7 +124,6 @@ input[type=submit] {
 
 h1 {
     text-align: center;
-    /*border-bottom: 1px solid #aaa;*/
     margin: 0 auto;
     margin-top: 50px;
 }
@@ -155,4 +154,24 @@ a.btn {
     line-height: 25px;
     text-align: center;
     background-color: #3498db;
+}
+
+.path {
+    height: 80px;
+    border: 1px solid #999;
+    margin-top: 5px;
+    padding: 0;
+}
+
+.path-title {
+    margin: 0;
+    line-height: 40px;
+    font-size: 22px;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+}
+
+.path-details {
+    margin: 0 7px;
+    line-height: 40px;
 }

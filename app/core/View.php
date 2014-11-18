@@ -5,8 +5,18 @@
 */
 class View
 {
+    /**
+     * @var string HTML content of the loaded template template
+     */
     static private $template;
-    static public function render($viewName, array $data = array())
+
+    /**
+     * renders a view with the loaded template if any and echos the result
+     *
+     * @param string $viewName name of the view to render
+     * @param array  $data     vars to pass to the view
+     */
+    static public function render($viewName, array $data = [])
     {
         
         $viewName = str_replace('.', '/', $viewName);
@@ -28,7 +38,13 @@ class View
         
     }
 
-    static public function addTemplate($templateName, array $data = array())
+    /**
+     * renders a template and stores the result in $template
+     *
+     * @param string $templateName name of the template to render
+     * @param array  $data         vars to pass to the view
+     */
+    static public function addTemplate($templateName, array $data = [])
     {
         $templateName = str_replace('.', '/', $templateName);
         if (!file_exists(APP . 'views/' . $templateName . '.php')) {
