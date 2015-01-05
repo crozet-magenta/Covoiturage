@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>VRoom ~ {% block title %} {% endblock %}</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{ asset('bundles/VRoomWebsite/css/style.css') }}">
+</head>
+<body>
+<div class="header">
+    <div class="wrapper">
+        <div class="left">
+            <a href="#"><img class="header-logo" src="{{ asset('bundles/VRoomWebsite/images/vroom logo.png') }}" alt="logo"></a>
+        </div>
+        <div class="right">
+            {% if is_granted('IS_AUTHENTICATED_ANONYMOUSLY') %}
+                <form action="#">
+                    <label for="email">Email :</label><input class="input" type="text" name="email" id="email">
+                    <label for="password">Mot de passe :</label><input class="input" type="text" name="password" id="password">
+                    <input class="btn" type="submit" name="submit" value="Connexion">
+                </form>
+            {% else %}
+                <div class="right">
+                    <a href="#"><img src="{{ asset('bundles/VRoomWebsite/images/grey.svg') }}" alt="avatar" class="avatar"></a><span class="username">Username</span><span class="caret">▼</span>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{%  block content %}
+
+{% endblock %}
+<div class="clearfix"></div>
+<div class="footer">
+    <div class="wrapper">
+        <div class="left">
+            <img src="{{ asset('bundles/VRoomWebsite/images/vroom logo.png') }}" alt="logo">
+        </div>
+        <div class="right">
+            <img src="{{ asset('bundles/VRoomWebsite/images/copyright.png') }}" alt="logo">
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,4 @@
+services:
+#    v_room_website.example:
+#        class: VRoom\WebsiteBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

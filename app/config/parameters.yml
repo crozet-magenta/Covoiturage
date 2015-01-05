@@ -1,0 +1,14 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_driver: pdo_mysql
+    database_host: 127.0.0.1
+    database_port: null
+    database_name: vroom
+    database_user: vroom
+    database_password: Vroom
+    mailer_transport: smtp
+    mailer_host: 127.0.0.1
+    mailer_user: null
+    mailer_password: null
+    locale: fr
+    secret: q57et17hb587s1es73687zr1sb3hd586f1475368xse7r1qtbs83e5h1j7t48fc36sx85g7fd6854j

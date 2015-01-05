@@ -1,0 +1,7 @@
+home:
+    path:     /
+    defaults: { _controller: VRoomWebsiteBundle:Public:home }
+
+profile:
+    path:     /profile
+    defaults: { _controller: VRoomWebsiteBundle:Public:profile }

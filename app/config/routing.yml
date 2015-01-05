@@ -1,0 +1,3 @@
+vroom_website:
+    resource: "@VRoomWebsiteBundle/Resources/config/routing.yml"
+    prefix:   /

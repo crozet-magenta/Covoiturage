@@ -1,0 +1,986 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b05e6f1b-cafe-4101-a036-785ac69d5bf7" name="Default" comment="added user role &amp; rights management&#10;added email for new user, account (dis)activated &amp; deleted">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/public/font/Champagne_Limousines.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/public/font/Champagne_Limousines.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/public/font/Champagne_Limousines.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/public/font/Champagne_Limousines.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/public/images/banner.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bundles/sensiodistribution/webconfigurator/images/blue-arrow.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bundles/framework/images/blue_picto_less.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bundles/framework/images/blue_picto_more.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/public/images/copyright.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bundles/sensiodistribution/webconfigurator/images/favicon.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bundles/framework/images/grey_magnifier.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bundles/framework/images/logo_symfony.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bundles/sensiodistribution/webconfigurator/images/notification.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/public/images/shadow.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/public/images/vroom logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/public/font/Champagne_Limousines.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/VRoom/WebsiteBundle/DependencyInjection/Configuration.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/Covoiturage.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Controller/PublicController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Tests/Controller/PublicControllerControllerTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/VRoom/WebsiteBundle/VRoomWebsiteBundle.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/VRoom/WebsiteBundle/DependencyInjection/VRoomWebsiteExtension.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/views/Layout/base.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bundles/framework/css/body.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/bootstrap.php.cache" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bundles/sensiodistribution/webconfigurator/css/configurator.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/public/images/copyright.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/crozet.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bundles/framework/css/exception.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/frameworkRootSettings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/public/images/grey.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/views/Public/home.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bundles/sensiodistribution/webconfigurator/css/install.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/translations/messages.fr.xlf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/config/parameters.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/views/Public/profile.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/config/routing.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/config/routing.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/config/services.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bundles/framework/css/structure.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/public/css/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/public/images/vroom logo.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="C:\wamp\www\Covoiturage\FWK\.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\Covoiturage\FWK\app\config\routing.yml" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\Covoiturage\FWK\app\logs\.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\Covoiturage\FWK\src\AppBundle\AppBundle.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\Covoiturage\FWK\src\AppBundle\Controller\DefaultController.php" afterPath="" />
+      <change type="MOVED" beforePath="C:\wamp\www\Covoiturage\FWK\LICENSE" afterPath="$PROJECT_DIR$/LICENSE" />
+      <change type="MOVED" beforePath="C:\wamp\www\Covoiturage\FWK\README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MOVED" beforePath="C:\wamp\www\Covoiturage\FWK\UPGRADE-2.2.md" afterPath="$PROJECT_DIR$/UPGRADE-2.2.md" />
+      <change type="MOVED" beforePath="C:\wamp\www\Covoiturage\FWK\UPGRADE-2.3.md" afterPath="$PROJECT_DIR$/UPGRADE-2.3.md" />
+      <change type="MOVED" beforePath="C:\wamp\www\Covoiturage\FWK\UPGRADE-2.4.md" afterPath="$PROJECT_DIR$/UPGRADE-2.4.md" />
+      <change type="MOVED" beforePath="C:\wamp\www\Covoiturage\FWK\UPGRADE.md" afterPath="$PROJECT_DIR$/UPGRADE.md" />
+      <change type="MOVED" beforePath="C:\wamp\www\Covoiturage\FWK\app\.htaccess" afterPath="$PROJECT_DIR$/app/.htaccess" />
+      <change type="MOVED" beforePath="C:\wamp\www\Covoiturage\FWK\app\AppCache.php" afterPath="$PROJECT_DIR$/app/AppCache.php" />
+      <change type="MOVED" beforePath="C:\wamp\www\Covoiturage\FWK\app\AppKernel.php" afterPath="$PROJECT_DIR$/app/AppKernel.php" />
+      <change type="MOVED" beforePath="C:\wamp\www\Covoiturage\FWK\app\Resources\views\base.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
+      <change type="MOVED" beforePath="C:\wamp\www\Covoiturage\FWK\app\Resources\views\default\index.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/default/index.html.twig" />
+      <change type="MOVED" beforePath="C:\wamp\www\Covoiturage\FWK\app\SymfonyRequirements.php" afterPath="$PROJECT_DIR$/app/SymfonyRequirements.php" />
+      <change type="MOVED" beforePath="C:\wamp\www\Covoiturage\FWK\app\autoload.php" afterPath="$PROJECT_DIR$/app/autoload.php" />
+      <change type="MOVED" beforePath="C:\wamp\www\Covoiturage\FWK\app\cache\.gitkeep" afterPath="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/doc/index.rst" />
+      <change type="MOVED" beforePath="C:\wamp\www\Covoiturage\FWK\app\check.php" afterPath="$PROJECT_DIR$/app/check.php" />
+      <change type="MOVED" beforePath="C:\wamp\www\Covoiturage\FWK\app\config\config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
+      <change type="MOVED" beforePath="C:\wamp\www\Covoiturage\FWK\app\config\config_dev.yml" afterPath="$PROJECT_DIR$/app/config/config_dev.yml" />
+      <change type="MOVED" beforePath="C:\wamp\www\Covoiturage\FWK\app\config\config_prod.yml" afterPath="$PROJECT_DIR$/app/config/config_prod.yml" />
+      <change type="MOVED" beforePath="C:\wamp\www\Covoiturage\FWK\app\config\config_test.yml" afterPath="$PROJECT_DIR$/app/config/config_test.yml" />
+      <change type="MOVED" beforePath="C:\wamp\www\Covoiturage\FWK\app\config\parameters.yml.dist" afterPath="$PROJECT_DIR$/app/config/parameters.yml.dist" />
+      <change type="MOVED" beforePath="C:\wamp\www\Covoiturage\FWK\app\config\routing_dev.yml" afterPath="$PROJECT_DIR$/app/config/routing_dev.yml" />
+      <change type="MOVED" beforePath="C:\wamp\www\Covoiturage\FWK\app\config\security.yml" afterPath="$PROJECT_DIR$/app/config/security.yml" />
+      <change type="MOVED" beforePath="C:\wamp\www\Covoiturage\FWK\app\config\services.yml" afterPath="$PROJECT_DIR$/app/config/services.yml" />
+      <change type="MOVED" beforePath="C:\wamp\www\Covoiturage\FWK\app\console" afterPath="$PROJECT_DIR$/app/console" />
+      <change type="MOVED" beforePath="C:\wamp\www\Covoiturage\FWK\app\phpunit.xml.dist" afterPath="$PROJECT_DIR$/app/phpunit.xml.dist" />
+      <change type="MOVED" beforePath="C:\wamp\www\Covoiturage\FWK\composer.json" afterPath="$PROJECT_DIR$/composer.json" />
+      <change type="MOVED" beforePath="C:\wamp\www\Covoiturage\FWK\composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
+      <change type="MOVED" beforePath="C:\wamp\www\Covoiturage\FWK\src\.htaccess" afterPath="$PROJECT_DIR$/src/.htaccess" />
+      <change type="MOVED" beforePath="C:\wamp\www\Covoiturage\FWK\src\AppBundle\Tests\Controller\DefaultControllerTest.php" afterPath="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Tests/Controller/DefaultControllerTest.php" />
+      <change type="MOVED" beforePath="C:\wamp\www\Covoiturage\FWK\web\.htaccess" afterPath="$PROJECT_DIR$/web/.htaccess" />
+      <change type="MOVED" beforePath="C:\wamp\www\Covoiturage\FWK\web\app.php" afterPath="$PROJECT_DIR$/web/app.php" />
+      <change type="MOVED" beforePath="C:\wamp\www\Covoiturage\FWK\web\app_dev.php" afterPath="$PROJECT_DIR$/web/app_dev.php" />
+      <change type="MOVED" beforePath="C:\wamp\www\Covoiturage\FWK\web\apple-touch-icon.png" afterPath="$PROJECT_DIR$/web/apple-touch-icon.png" />
+      <change type="MOVED" beforePath="C:\wamp\www\Covoiturage\FWK\web\config.php" afterPath="$PROJECT_DIR$/web/config.php" />
+      <change type="MOVED" beforePath="C:\wamp\www\Covoiturage\FWK\web\favicon.ico" afterPath="$PROJECT_DIR$/web/favicon.ico" />
+      <change type="MOVED" beforePath="C:\wamp\www\Covoiturage\FWK\web\robots.txt" afterPath="$PROJECT_DIR$/web/robots.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+    </list>
+    <ignored path="sdd.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="sdd" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/views/Layout/base.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.33415234" vertical-offset="0" max-vertical-offset="867">
+              <caret line="16" column="58" selection-start-line="16" selection-start-column="58" selection-end-line="16" selection-end-column="58" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="true" />
+    </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/src/S2d/WebsiteBundle/Resources/views/Public/groupes.html.twig" />
+        <option value="$PROJECT_DIR$/app/config/parameters.yml" />
+        <option value="$PROJECT_DIR$/src/S2d/WebsiteBundle/Controller/PublicController.php" />
+        <option value="$PROJECT_DIR$/src/S2d/WebsiteBundle/Entity/PrivateNews.php" />
+        <option value="$PROJECT_DIR$/src/S2d/WebsiteBundle/Resources/views/Public/actualitesShow.html.twig" />
+        <option value="$PROJECT_DIR$/src/S2d/WebsiteBundle/Resources/views/Membres/actualitesShow.html.twig" />
+        <option value="$PROJECT_DIR$/src/S2d/UserBundle/Resources/views/Security/login.html.twig" />
+        <option value="$PROJECT_DIR$/src/S2d/WebsiteBundle/Entity/PrivateNewsRepository.php" />
+        <option value="$PROJECT_DIR$/src/S2d/UserBundle/Entity/UserRepository.php" />
+        <option value="$PROJECT_DIR$/src/S2d/WebsiteBundle/Resources/public/js/main.js" />
+        <option value="$PROJECT_DIR$/src/S2d/UserBundle/Entity/User.php" />
+        <option value="$PROJECT_DIR$/app/config/security.yml" />
+        <option value="$PROJECT_DIR$/src/S2d/AdherentsBundle/Entity/AdherentsRepository.php" />
+        <option value="$PROJECT_DIR$/src/S2d/WebsiteBundle/Resources/views/Membres/actualites.html.twig" />
+        <option value="$PROJECT_DIR$/src/S2d/WebsiteBundle/Resources/views/Public/actualites.html.twig" />
+        <option value="$PROJECT_DIR$/src/S2d/UserBundle/Resources/views/Manage/details.html.twig" />
+        <option value="$PROJECT_DIR$/src/S2d/AdherentsBundle/Resources/views/Manage/edit.html.twig" />
+        <option value="$PROJECT_DIR$/src/S2d/AdherentsBundle/Resources/views/Manage/details.html.twig" />
+        <option value="$PROJECT_DIR$/src/S2d/AdherentsBundle/Form/AdherentsType.php" />
+        <option value="$PROJECT_DIR$/src/S2d/AdherentsBundle/Entity/Adherents.php" />
+        <option value="$PROJECT_DIR$/src/S2d/AdherentsBundle/Controller/ManageController.php" />
+        <option value="$PROJECT_DIR$/src/S2d/AdherentsBundle/Resources/views/Manage/add.html.twig" />
+        <option value="$PROJECT_DIR$/src/S2d/WebsiteBundle/Entity/DocumentRepository.php" />
+        <option value="$PROJECT_DIR$/src/S2d/WebsiteBundle/Resources/views/Membres/document.html.twig" />
+        <option value="$PROJECT_DIR$/src/S2d/WebsiteBundle/Form/DocumentType.php" />
+        <option value="$PROJECT_DIR$/src/S2d/WebsiteBundle/Controller/MembresController.php" />
+        <option value="$PROJECT_DIR$/src/S2d/WebsiteBundle/Resources/views/Layout/base.html.twig" />
+        <option value="$PROJECT_DIR$/src/S2d/WebsiteBundle/Resources/views/Manage/documents.html.twig" />
+        <option value="$PROJECT_DIR$/src/S2d/WebsiteBundle/Resources/views/Manage/documentsAdd.html.twig" />
+        <option value="$PROJECT_DIR$/src/S2d/WebsiteBundle/Entity/Document.php" />
+        <option value="$PROJECT_DIR$/src/S2d/WebsiteBundle/Resources/views/Manage/actualitesAdd.html.twig" />
+        <option value="$PROJECT_DIR$/src/S2d/WebsiteBundle/Resources/views/Manage/actualites.html.twig" />
+        <option value="$PROJECT_DIR$/src/S2d/WebsiteBundle/Form/NewsType.php" />
+        <option value="$PROJECT_DIR$/src/S2d/WebsiteBundle/Controller/ManageController.php" />
+        <option value="$PROJECT_DIR$/src/S2d/UserBundle/Controller/SecurityController.php" />
+        <option value="$PROJECT_DIR$/src/S2d/UserBundle/Form/UserEditType.php" />
+        <option value="$PROJECT_DIR$/src/S2d/UserBundle/Resources/views/Manage/edit.html.twig" />
+        <option value="$PROJECT_DIR$/src/S2d/WebsiteBundle/Resources/config/routing.yml" />
+        <option value="$PROJECT_DIR$/src/S2d/UserBundle/Resources/views/Manage/home.html.twig" />
+        <option value="$PROJECT_DIR$/src/S2d/UserBundle/Controller/ManageController.php" />
+        <option value="$PROJECT_DIR$/src/S2d/AdherentsBundle/Resources/views/Manage/home.html.twig" />
+        <option value="$PROJECT_DIR$/src/S2d/WebsiteBundle/Resources/public/css/basic-style.css" />
+        <option value="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/views/Public/user.html.twig" />
+        <option value="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/views/Public/test.html.twig" />
+        <option value="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Controller/DefaultController.php" />
+        <option value="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/config/routing.yml" />
+        <option value="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Controller/PublicController.php" />
+        <option value="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/views/Public/profile.html.twig" />
+        <option value="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/views/Public/home.html.twig" />
+        <option value="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/public/images/copyright.svg" />
+        <option value="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/views/Layout/base.html.twig" />
+      </list>
+    </option>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="2" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Covoiturage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Covoiturage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Covoiturage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Covoiturage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Covoiturage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Covoiturage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Covoiturage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bundles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Covoiturage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Covoiturage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Covoiturage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Covoiturage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VRoom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebsiteBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Covoiturage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Covoiturage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VRoom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebsiteBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Covoiturage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Covoiturage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VRoom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebsiteBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Layout" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Covoiturage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Covoiturage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VRoom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebsiteBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Covoiturage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Covoiturage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VRoom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebsiteBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Covoiturage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Covoiturage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VRoom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebsiteBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Covoiturage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Covoiturage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VRoom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebsiteBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Covoiturage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Covoiturage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VRoom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebsiteBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="recentsLimit" value="5" />
+    <property name="FullScreen" value="false" />
+    <property name="options.lastSelected" value="editor.preferences.import" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="LayoutCode.rearrangeEntriesPHP" value="false" />
+    <property name="ChangesBrowser.SHOW_FLATTEN" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp\www\sdd\src\S2d\WebsiteBundle\Resources\views\Manage" />
+      <recent name="C:\wamp\www\sdd\src\S2d\AdherentsBundle\Entity" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp\www\sdd\src\S2d\AdherentsBundle\Resources\views\Manage\" />
+      <recent name="C:\wamp\www\sdd\src\S2d\UserBundle\Resources\views\Security\" />
+      <recent name="C:\wamp\www\sdd\src\S2d\UserBundle\Form" />
+      <recent name="C:\wamp\www\sdd\src\S2d\UserBundle\Resources\Form" />
+      <recent name="C:\wamp\www\sdd\src\S2d\UserBundle\" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.routing.yml">
+    <configuration default="false" name="routing.yml" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://sdd.loc/src/S2d/WebsiteBundle/Resources/config/routing.yml">
+      <RunnerSettings RunnerId="JavascriptDebugRunner" />
+      <ConfigurationWrapper RunnerId="JavascriptDebugRunner" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server" server_id="2ae1602a-b729-4354-94bd-278ffc84c913" server_name="sdd.loc">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <pass-parent-env-vars>false</pass-parent-env-vars>
+      <envs />
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.routing.yml" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.routing.yml" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b05e6f1b-cafe-4101-a036-785ac69d5bf7" name="Default" comment="" />
+      <created>1416948633660</created>
+      <option name="number" value="Default" />
+      <updated>1416948633660</updated>
+    </task>
+    <task id="LOCAL-00001" summary="remove ACME bundle, create S2d bundle">
+      <created>1417038417145</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1417038417145</updated>
+    </task>
+    <task id="LOCAL-00002" summary="remove ACME bundle, create S2d bundle">
+      <created>1417038549530</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1417038549530</updated>
+    </task>
+    <task id="LOCAL-00003" summary="User register and login OK">
+      <created>1418762657632</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1418762657632</updated>
+    </task>
+    <task id="LOCAL-00004" summary="show news list (no pagination) and show one news">
+      <created>1418812277726</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1418812277726</updated>
+    </task>
+    <task id="LOCAL-00005" summary="added pagination in news,&#10;added contact form&#10;added auto redirect after register and send mail&#10;&#10;==&gt; public zone is done ! hurray">
+      <created>1418921472868</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1418921472868</updated>
+    </task>
+    <task id="LOCAL-00006" summary="added auth filters on routes&#10;added user management (activate/block/delete)">
+      <created>1419439056035</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1419439056035</updated>
+    </task>
+    <task id="LOCAL-00007" summary="added adherents management (add, edit) with group control&#10;all internal pages (for members) are done (news, docs, adherents)">
+      <created>1420137039696</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1420137039696</updated>
+    </task>
+    <task id="LOCAL-00008" summary="added manage page for news (internal &amp; external)">
+      <created>1420219484231</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1420219484231</updated>
+    </task>
+    <task id="LOCAL-00009" summary="added manage page for news (internal &amp; external)">
+      <created>1420219543294</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1420219543294</updated>
+    </task>
+    <task id="LOCAL-00010" summary="added user role &amp; rights management&#10;added email for new user, account (dis)activated &amp; deleted">
+      <created>1420230829397</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1420230829397</updated>
+    </task>
+    <task id="LOCAL-00011" summary="added user role &amp; rights management&#10;added email for new user, account (dis)activated &amp; deleted">
+      <created>1420230849471</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1420230849471</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32792208" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Framework" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2249467" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38594595" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32792208" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32864866" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+    <MESSAGE value="remove ACME bundle, create S2d bundle" />
+    <MESSAGE value="User register and login OK" />
+    <MESSAGE value="show news list (no pagination) and show one news" />
+    <MESSAGE value="added pagination in news,&#10;added contact form&#10;added auto redirect after register and send mail&#10;&#10;==&gt; public zone is done ! hurray" />
+    <MESSAGE value="added auth filters on routes&#10;added user management (activate/block/delete)" />
+    <MESSAGE value="added adherents management (add, edit) with group control&#10;all internal pages (for members) are done (news, docs, adherents)" />
+    <MESSAGE value="added manage page for news (internal &amp; external)" />
+    <MESSAGE value="added user role &amp; rights management&#10;added email for new user, account (dis)activated &amp; deleted" />
+    <option name="LAST_COMMIT_MESSAGE" value="added user role &amp; rights management&#10;added email for new user, account (dis)activated &amp; deleted" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="17" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/views/Layout/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="731">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/views/Layout/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="731">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/error.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/error.json.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="119">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/error.rdf.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="119">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/error.txt.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/error.atom.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="119">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/error.xml.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="153">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/exception.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="918" max-vertical-offset="2193">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/error.js.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="170">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Form/FormTypeInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.52698046" vertical-offset="0" max-vertical-offset="871">
+          <caret line="93" column="20" selection-start-line="93" selection-start-column="20" selection-end-line="93" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/security.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20870535" vertical-offset="0" max-vertical-offset="896">
+          <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="883">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/traces.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="883">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/error.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="374">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/error.json.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="896">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/error.rdf.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="896">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/error.txt.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="896">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/error.atom.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="896">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/error.xml.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="896">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/exception.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.0711786" vertical-offset="918" max-vertical-offset="2193">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/error.js.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="896">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/VRoom/WebsiteBundle/VRoomWebsiteBundle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="897">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/config/services.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="897">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204">
+          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+          <folding>
+            <marker date="1420490339412" expanded="true" signature="-1:-1" placeholder="home:" />
+            <marker date="1420490339412" expanded="true" signature="-1:-1" placeholder="profile:" />
+            <marker date="1420490339412" expanded="true" signature="-1:-1" placeholder="defaults:" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/VRoom/WebsiteBundle/DependencyInjection/VRoomWebsiteExtension.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="897">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/VRoom/WebsiteBundle/DependencyInjection/Configuration.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="897">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/VRoom/WebsiteBundle/Controller/PublicController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.09758898" vertical-offset="0" max-vertical-offset="871">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/views/Public/profile.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1326">
+          <caret line="0" column="30" selection-start-line="0" selection-start-column="30" selection-end-line="0" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/views/Public/home.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-24.192308" vertical-offset="0" max-vertical-offset="1258">
+          <caret line="37" column="56" selection-start-line="37" selection-start-column="56" selection-end-line="37" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/public/images/copyright.svg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3846154" vertical-offset="0" max-vertical-offset="884">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/public/images/copyright.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/views/Layout/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33415234" vertical-offset="0" max-vertical-offset="867">
+          <caret line="16" column="58" selection-start-line="16" selection-start-column="58" selection-end-line="16" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
+

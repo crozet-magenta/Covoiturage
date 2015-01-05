@@ -1,0 +1,69 @@
+{% extends 'VRoomWebsiteBundle:Layout:base.html.twig' %}
+
+{% block title %}
+    Accueil
+{% endblock %}
+
+{% block content %}
+    <div class="banner wrapper">
+        <div class="quote left">
+            <p>
+                “Je soeurs avec mon keuka et à peine <br>
+                deuheurs c’est l’heure” - Le Doigt
+            </p>
+        </div>
+        <div class="slogan right">
+            C’est l’heure de<br>
+            démarrer !
+        </div>
+    </div>
+    <div class="search">
+        <div class="wrapper">
+            <form action="#">
+                <div class="left">
+                    <label for="from">Départ :</label><input class="input" type="text" name="from" id="from">
+                    <label for="to">Arrivée :</label><input class="input" type="text" name="to" id="to">
+                    <label for="date">Date :</label><input class="input" type="date" name="date" id="date">
+                </div>
+                <div class="right">
+                    <input class="btn btn-big" type="submit" name="submit" value="Rechercher">
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="wrapper">
+            <h1>Près de chez vous</h1>
+            <article class="ride half">
+                <img src="{{ asset('bundles/VRoomWebsite/images/grey.svg') }}" alt="" class="thumbnail">
+                Départ - Arrivée<br>
+                Date<br>
+                Nom
+            </article>
+            <article class="ride half">
+                <img src="{{ asset('bundles/VRoomWebsite/images/grey.svg') }}" alt="" class="thumbnail">
+                Départ - Arrivée<br>
+                Date<br>
+                Nom
+            </article>
+            <article class="ride half">
+                <img src="{{ asset('bundles/VRoomWebsite/images/grey.svg') }}" alt="" class="thumbnail">
+                Départ - Arrivée<br>
+                Date<br>
+                Nom
+            </article>
+            <article class="ride half">
+                <img src="{{ asset('bundles/VRoomWebsite/images/grey.svg') }}" alt="" class="thumbnail">
+                Départ - Arrivée<br>
+                Date<br>
+                Nom
+            </article>
+            <article class="ride half">
+                <img src="{{ asset('bundles/VRoomWebsite/images/grey.svg') }}" alt="" class="thumbnail">
+                Départ - Arrivée<br>
+                Date<br>
+                Nom
+            </article>
+        </div>
+    </div>
+{% endblock %}
