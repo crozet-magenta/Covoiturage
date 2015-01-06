@@ -3,5 +3,9 @@ home:
     defaults: { _controller: VRoomWebsiteBundle:Public:home }
 
 profile:
-    path:     /profile
+    path:     /profile/{user}
     defaults: { _controller: VRoomWebsiteBundle:Public:profile }
+
+offer:
+    path:     /register/offer
+    defaults: { _controller: VRoomWebsiteBundle:Public:offer }
