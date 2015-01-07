@@ -14,20 +14,28 @@ class PublicController extends Controller
 
     public function homeAction()
     {
+        $latitude = unserialize(
+                    file_get_contents('http://www.geoplugin.net/php.gp?ip='.$_SERVER['REMOTE_ADDR'])
+                )['geoplugin_latitude'];
+        $longitude = unserialize(
+            file_get_contents('http://www.geoplugin.net/php.gp?ip='.$_SERVER['REMOTE_ADDR'])
+        )['geoplugin_longitude'];
+
         return $this->render('VRoomWebsiteBundle:Public:home.html.twig');
     }
 
     public function profileAction(User $user)
     {
-        $repo = $this->getDoctrine()->getRepository('VRoomWebsiteBundle:path');
+        $repo = $this->getDoctrine()->getRepository('VRoomWebsiteBundle:Path');
         $paths = $repo->findByUser($user);
-        return $this->render('VRoomWebsiteBundle:Public:profile.html.twig', compact('user', 'path'));
+        return $this->render('VRoomWebsiteBundle:Public:profile.html.twig', compact('user', 'paths'));
     }
 
     public function offerAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
-        $form = $this->createForm(new OfferType(), new Offer());
+
+        $form = $this->createForm(new OfferType(), new Offer(), ['em'=>$em,]);
         $form->handleRequest($request);
 
         if ($request->getMethod() == 'POST') {

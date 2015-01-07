@@ -1,12 +1,25 @@
 security:
     providers:
-        in_memory:
-            memory: ~
+        main:
+            entity: { class: VRoom\WebsiteBundle\Entity\User, property: email }
+
+    encoders:
+        VRoom\WebsiteBundle\Entity\User: sha512
 
     firewalls:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
+        main:
+            pattern:   ^/
+            anonymous: true
+            provider:  main
+            form_login:
+                login_path: login
+                check_path: login_check
+            logout:
+                path:   logout
+                target: /
 
         default:
             anonymous: ~

@@ -24,7 +24,7 @@ class City
     /**
      * @var string
      *
-     * @ORM\Column(name="slug", type="string", length=50)
+     * @ORM\Column(name="search", type="string", length=50)
      */
     private $slug;
 
@@ -42,6 +42,19 @@ class City
      */
     private $zipCode;
 
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="latitude", type="float", length=5)
+     */
+    private $latitude;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="zip_code", type="float", length=5)
+     */
+    private $longitude;
 
     /**
      * Get id
@@ -121,4 +134,38 @@ class City
     {
         return $this->zipCode;
     }
+
+    /**
+     * @return string
+     */
+    public function getLatitude()
+    {
+        return $this->latitude;
+    }
+
+    /**
+     * @param string $latitude
+     */
+    public function setLatitude($latitude)
+    {
+        $this->latitude = $latitude;
+    }
+
+    /**
+     * @return float
+     */
+    public function getLongitude()
+    {
+        return $this->longitude;
+    }
+
+    /**
+     * @param float $longitude
+     */
+    public function setLongitude($longitude)
+    {
+        $this->longitude = $longitude;
+    }
+
+
 }

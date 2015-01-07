@@ -5,6 +5,7 @@ namespace VRoom\WebsiteBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
+use VRoom\WebsiteBundle\Form\DataTransformer\StringToCityTransformer;
 
 class PathType extends AbstractType
 {
@@ -14,9 +15,15 @@ class PathType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder
-            ->add('startCity', 'entity', ['property'=>'name', 'class'=>'VRoomWebsiteBundle:City', 'label'=>'Ville de départ'])
-            ->add('endCity', 'text', ['label'=>'Ville d\'arrivée'])
+        $transformer = new StringToCityTransformer($options['em']);
+        $builder->add(
+            $builder->create('startCity', 'text', ['label'=>'Ville de départ'] )
+                    ->addModelTransformer($transformer)
+        );
+        $builder->add(
+            $builder->create('endCity'  , 'text', ['label'=>'Ville d\'arrivée'])
+                    ->addModelTransformer($transformer)
+        );
         ;
     }
     
@@ -27,6 +34,12 @@ class PathType extends AbstractType
     {
         $resolver->setDefaults(array(
             'data_class' => 'VRoom\WebsiteBundle\Entity\Path'
+        ));
+        $resolver->setRequired(array(
+            'em',
+        ));
+        $resolver->setAllowedTypes(array(
+            'em' => 'Doctrine\Common\Persistence\ObjectManager',
         ));
     }
 

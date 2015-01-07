@@ -18,7 +18,8 @@ class OfferType extends AbstractType
             ->add('startDate', null, ['label'=>'Date de départ'])
             ->add('seats', null, ['label'=>'Nombre de places'])
             ->add('price', null, ['label'=>'Prix'])
-            ->add('path', new PathType())
+            ->add('path', new PathType(), ['em'=>$options['em']])
+            ->add('Envoyer', 'submit')
         ;
     }
     
@@ -29,6 +30,12 @@ class OfferType extends AbstractType
     {
         $resolver->setDefaults(array(
             'data_class' => 'VRoom\WebsiteBundle\Entity\Offer'
+        ));
+        $resolver->setRequired(array(
+            'em',
+        ));
+        $resolver->setAllowedTypes(array(
+            'em' => 'Doctrine\Common\Persistence\ObjectManager',
         ));
     }
 

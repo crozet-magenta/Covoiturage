@@ -28,7 +28,7 @@ class Offer
     private $user;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Path")
+     * @ORM\ManyToOne(targetEntity="Path", cascade={"persist"})
      * @ORM\JoinColumn(name="path", referencedColumnName="id")
      */
     private $path;

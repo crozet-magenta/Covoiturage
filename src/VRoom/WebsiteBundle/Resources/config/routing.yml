@@ -9,3 +9,13 @@ profile:
 offer:
     path:     /register/offer
     defaults: { _controller: VRoomWebsiteBundle:Public:offer }
+
+login:
+    pattern:  /login
+    defaults: { _controller: VRoomWebsiteBundle:Security:login }
+
+login_check:
+    pattern:  /login_check
+
+logout:
+    pattern:  /logout

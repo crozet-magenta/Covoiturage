@@ -11,13 +11,15 @@
 <div class="header">
     <div class="wrapper">
         <div class="left">
-            <a href="#"><img class="header-logo" src="{{ asset('bundles/VRoomWebsite/images/vroom logo.png') }}" alt="logo"></a>
+            <a href="{{ path('home') }}"><img class="header-logo" src="{{ asset('bundles/VRoomWebsite/images/vroom logo.png') }}" alt="logo"></a>
         </div>
         <div class="right">
             {% if is_granted('IS_AUTHENTICATED_ANONYMOUSLY') %}
-                <form action="#">
-                    <label for="email">Email :</label><input class="input" type="text" name="email" id="email">
-                    <label for="password">Mot de passe :</label><input class="input" type="text" name="password" id="password">
+                <form action="{{ path('login_check') }}" method="post">
+                    <label for="email">Email :</label>
+                    <input class="input" type="email" name="_username" id="email">
+                    <label for="password">Mot de passe :</label>
+                    <input class="input" type="password" name="_password" id="password">
                     <input class="btn" type="submit" name="submit" value="Connexion">
                 </form>
             {% else %}
