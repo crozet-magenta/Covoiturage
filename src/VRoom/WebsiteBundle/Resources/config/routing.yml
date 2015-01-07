@@ -3,7 +3,7 @@ home:
     defaults: { _controller: VRoomWebsiteBundle:Public:home }
 
 profile:
-    path:     /profile/{user}
+    path:     /profile/{name}
     defaults: { _controller: VRoomWebsiteBundle:Public:profile }
 
 offer:

@@ -8,7 +8,7 @@
     <div class="main-content wrapper">
         <section class="summary">
             <div class="avatar-big">
-                <img src="{{ asset('bundles/VRoomWebsite/images/grey.svg') }}" alt="avatar big">
+                <img src="http://www.gravatar.com/avatar/{{ hash }}?s=200&d=retro" alt="avatar big">
             </div>
             <h1 class="username">Username</h1>
             <p>
@@ -18,24 +18,14 @@
         <section class="stats">
             <div class="half">
                 <h2>Annonces</h2>
-                <article class="ride">
-                    <img src="{{ asset('bundles/VRoomWebsite/images/grey.svg') }}" alt="" class="thumbnail">
-                    Départ - Arrivée<br>
-                    Date<br>
-                    Nom
-                </article>
-                <article class="ride">
-                    <img src="{{ asset('bundles/VRoomWebsite/images/grey.svg') }}" alt="" class="thumbnail">
-                    Départ - Arrivée<br>
-                    Date<br>
-                    Nom
-                </article>
-                <article class="ride">
-                    <img src="{{ asset('bundles/VRoomWebsite/images/grey.svg') }}" alt="" class="thumbnail">
-                    Départ - Arrivée<br>
-                    Date<br>
-                    Nom
-                </article>
+                {% for offer in offers %}
+                    <article class="ride">
+                        <img src="http://www.gravatar.com/avatar/{{ hash }}?s=96&d=identicon" alt="" class="thumbnail">
+                        {{ offer.path.startCity.name }} - {{ offer.path.endCity.name }}<br>
+                        {{ offer.startDate | date('d-m-Y') }}<br>
+                        {{ user.name }}
+                    </article>
+                {% endfor %}
             </div>
             <div class="half">
                 <h2>Avis</h2>
@@ -70,6 +60,5 @@
             </div>
         </section>
         <div class="clearfix"></div>
-        {{ dump(user, path) }}
     </div>
 {% endblock %}
