@@ -15,18 +15,10 @@ class PublicController extends Controller
 
     public function homeAction()
     {
-        $latitude = unserialize(
-                    file_get_contents('http://www.geoplugin.net/php.gp?ip='.$_SERVER['REMOTE_ADDR'])
-                )['geoplugin_latitude'];
-        $longitude = unserialize(
-            file_get_contents('http://www.geoplugin.net/php.gp?ip='.$_SERVER['REMOTE_ADDR'])
-        )['geoplugin_longitude'];
-        var_dump($latitude, $longitude);
         $em = $this->getDoctrine()->getManager();
         $rsm = new ResultSetMappingBuilder($em);
         $rsm->addRootEntityFromClassMetadata('VRoomWebsiteBundle:City', 'c');
 
-        //"SELECT *, 3956 * 2 * ASIN(SQRT(POWER(SIN((43.2965 - abs(latitude)) * pi()/180 / 2),2) + COS(43.29 * pi()/180 ) * COS(abs(latitude) *  pi()/180) * POWER(SIN((5.3698 - longitude) *  pi()/180 / 2), 2) )) as distance FROM cities having distance < 50 ORDER BY `distance`  ASC;"
         $query = $em->createNativeQuery(
                 'SELECT *,
                 3956 * 2 * ASIN(SQRT(POWER(SIN(( :latitude - abs(c.latitude)) * pi()/180 / 2),2)
@@ -37,9 +29,27 @@ class PublicController extends Controller
                 ORDER BY distance  ASC
                 LIMIT 25', $rsm
             );
+        $latitude = unserialize(
+            file_get_contents('http://www.geoplugin.net/php.gp?ip='.$_SERVER['REMOTE_ADDR'])
+        )['geoplugin_latitude'];
+        $longitude = unserialize(
+            file_get_contents('http://www.geoplugin.net/php.gp?ip='.$_SERVER['REMOTE_ADDR'])
+        )['geoplugin_longitude'];
         $query->setParameter('latitude', $latitude)->setParameter('longitude', $longitude);
-
         $data = $query->getResult();
+        $ids = [];
+        foreach ($data as $city) {
+            $ids[] = $city->getId();
+        }
+        $query = $em->getRepository('VRoomWebsiteBundle:Path')->createQueryBuilder('p')
+            ->where('p.startCity in (:ids)')
+            ->setParameter('ids', $ids)
+            ->getQuery();
+        $paths = $query->getResult();
+        foreach ($paths as $path) {
+            $ids[] = $path->getId();
+        }
+        $data = $em->getRepository('VRoomWebsiteBundle:Offer')->findBy(['path' => $ids]);
         return $this->render('VRoomWebsiteBundle:Public:home.html.twig', compact('data'));
     }
 
