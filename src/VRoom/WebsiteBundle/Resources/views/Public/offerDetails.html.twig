@@ -1,0 +1,16 @@
+{% extends 'VRoomWebsiteBundle:Layout:base.html.twig' %}
+
+{% block title %}
+    Accueil
+{% endblock %}
+
+{% block content %}
+    <div class="main-content wrapper">
+        <iframe
+                width="600"
+                height="450"
+                frameborder="0" style="border:0"
+                src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyCGtbB168WhHbDpMiJxrRzu0ZJGnwH3isg&origin={{ offer.path.startCity.name }}&destination={{ offer.path.endCity.name }}">
+        </iframe>
+    </div>
+{% endblock %}

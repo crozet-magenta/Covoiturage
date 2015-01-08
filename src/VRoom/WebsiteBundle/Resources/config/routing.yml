@@ -10,6 +10,10 @@ offer:
     path:     /register/offer
     defaults: { _controller: VRoomWebsiteBundle:Public:offer }
 
+offer_details:
+    path:     /offer/details/{id}-{start}-{end}
+    defaults: { _controller: VRoomWebsiteBundle:Public:offerDetails }
+
 register:
     pattern:  /register
     defaults: { _controller: VRoomWebsiteBundle:Security:register }

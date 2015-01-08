@@ -26,8 +26,10 @@
                 <h2>Annonces</h2>
                 {% for offer in offers %}
                     <article class="ride">
-                        <img src="http://www.gravatar.com/avatar/{{ user.hash }}?s=96&d=identicon" alt="" class="thumbnail">
-                        {{ offer.path.startCity.name }} - {{ offer.path.endCity.name }}<br>
+                        <a href="{{ path('profile', {'id': offer.user.id, 'name': offer.user.name}) }}"><img src="http://www.gravatar.com/avatar/{{ offer.user.hash }}?s=96&d=identicon" alt="" class="thumbnail"></a>
+                        <a href="{{ path('offer_details', {'id': offer.id, 'start': offer.path.startCity.name, 'end': offer.path.endCity.name}) }}">
+                            {{ offer.path.startCity.name }} - {{ offer.path.endCity.name }}
+                        </a><br>
                         {{ offer.startDate | date('d-m-Y') }}<br>
                         {{ user.name }}
                     </article>

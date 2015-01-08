@@ -83,4 +83,9 @@ class PublicController extends Controller
         }
         return $this->render('VRoomWebsiteBundle:Public:registerOffer.html.twig', ['form'=>$form->createView()]);
     }
+
+    public function offerDetailsAction(Offer $offer)
+    {
+        return $this->render('VRoomWebsiteBundle:Public:offerDetails.html.twig', compact('offer'));
+    }
 }
