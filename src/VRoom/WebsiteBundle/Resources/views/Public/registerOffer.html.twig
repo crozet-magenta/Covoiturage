@@ -1,11 +1,21 @@
 {% extends 'VRoomWebsiteBundle:Layout:base.html.twig' %}
 
+{% form_theme form _self %}
+
 {% block title %}
-    Accueil
+    Nouveau trajet
 {% endblock %}
 
+{% block form_row %}
+    <div class="clearfix">
+        {{ form_label(form) }}
+        {{ form_widget(form) }}
+        <div class="error">{{ form_errors(form) }}</div>
+    </div>
+{% endblock form_row %}
 {% block content %}
     <div class="main-content wrapper">
+        <h1>Ajouter un trajet</h1>
         {{ form(form) }}
     </div>
 {% endblock %}

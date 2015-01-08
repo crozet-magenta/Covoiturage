@@ -16,31 +16,28 @@ use VRoom\WebsiteBundle\Form\UserType;
 
 
 class SecurityController extends Controller{
-    public function registerAction() {
-        $form = $this->createForm(new UserType(), new User());
+
+    public function registerAction(Request $request) {
+        $form = $this->createForm(new UserType(), new User(), ['attr'=>['class'=>'main-form']]);
+        $form->add('Envoyer', 'submit');
         $em = $this->getDoctrine()->getManager();
 
+        $form->handleRequest($request);
 
-    }
+        if ($request->getMethod() == 'POST') {
+            if ($form->isValid()) {
+                $user = $form->getData();
 
-    public function loginAction(Request $request)
-    {
-        if ($this->get('security.context')->isGranted('IS_AUTHENTICATED_REMEMBERED')) {
-            return $this->redirect($this->generateUrl('home'));
+                $factory = $this->get('security.encoder_factory');
+                $encoder = $factory->getEncoder($user);
+                $password = $encoder->encodePassword($user->getPassword(), $user->getSalt());
+                $user->setPassword($password);
+                $user->setRegistration(new \DateTime());
+                $em->persist($user);
+                $em->flush();
+                return $this->redirectToRoute('home');
+            }
         }
-
-        $session = $request->getSession();
-
-        if ($request->attributes->has(SecurityContext::AUTHENTICATION_ERROR)) {
-            $error = $request->attributes->get(SecurityContext::AUTHENTICATION_ERROR);
-        } else {
-            $error = $session->get(SecurityContext::AUTHENTICATION_ERROR);
-            $session->remove(SecurityContext::AUTHENTICATION_ERROR);
-        }
-
-        return $this->render('VRoomWebsiteBundle:Public:home.html.twig', array(
-            'last_username' => $session->get(SecurityContext::LAST_USERNAME),
-            'error'         => $error,
-        ));
+        return $this->render('VRoomWebsiteBundle:Public:register.html.twig', ['form'=>$form->createView()]);
     }
 } 

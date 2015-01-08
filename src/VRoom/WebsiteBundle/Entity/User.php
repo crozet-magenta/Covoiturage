@@ -5,10 +5,13 @@ namespace VRoom\WebsiteBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\Role\Role;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * user
  *
+ * @UniqueEntity("email")
  * @ORM\Table("users")
  * @ORM\Entity
  */
@@ -40,6 +43,10 @@ class User implements UserInterface
     /**
      * @var string
      *
+     * @Assert\Email(
+     *     message = "'{{ value }}' n'est pas un email valide.",
+     *     checkMX = true
+     * )
      * @ORM\Column(name="email", type="string", length=255)
      */
     private $email;
@@ -236,5 +243,10 @@ class User implements UserInterface
     public function eraseCredentials()
     {
         return ;
+    }
+
+    public function getHash()
+    {
+        return md5(strtolower(trim($this->getEmail())));
     }
 }

@@ -34,38 +34,17 @@
     <div class="main-content">
         <div class="wrapper">
             <h1>Près de chez vous</h1>
-            <article class="ride half">
-                <img src="{{ asset('bundles/VRoomWebsite/images/grey.svg') }}" alt="" class="thumbnail">
-                Départ - Arrivée<br>
-                Date<br>
-                Nom
-            </article>
-            <article class="ride half">
-                <img src="{{ asset('bundles/VRoomWebsite/images/grey.svg') }}" alt="" class="thumbnail">
-                Départ - Arrivée<br>
-                Date<br>
-                Nom
-            </article>
-            <article class="ride half">
-                <img src="{{ asset('bundles/VRoomWebsite/images/grey.svg') }}" alt="" class="thumbnail">
-                Départ - Arrivée<br>
-                Date<br>
-                Nom
-            </article>
-            <article class="ride half">
-                <img src="{{ asset('bundles/VRoomWebsite/images/grey.svg') }}" alt="" class="thumbnail">
-                Départ - Arrivée<br>
-                Date<br>
-                Nom
-            </article>
-            <article class="ride half">
-                <img src="{{ asset('bundles/VRoomWebsite/images/grey.svg') }}" alt="" class="thumbnail">
-                Départ - Arrivée<br>
-                Date<br>
-                Nom
-            </article>
+            {%  for ride in data %}
+                <article class="ride half">
+                    <img src="{{ ride.user.hash }}" alt="avatar" class="thumbnail">
+                    {{ ride.path.startCity }} - {{ ride.path.endCity }}<br>
+                    {{ ride.startDate | date("d/m/Y G:i") }}<br>
+                    {{ ride.user.surname }} {{ ride.user.name }}
+                </article>
+            {% endfor %}
+            {% if data is empty %}
+                Il n'y a pas de trajet près de chez vous.
+            {% endif %}
         </div>
     </div>
-    <div class="clearfix"></div>
-    {{ dump(data) }}
 {% endblock %}

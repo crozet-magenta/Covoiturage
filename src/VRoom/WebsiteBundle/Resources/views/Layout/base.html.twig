@@ -14,17 +14,18 @@
             <a href="{{ path('home') }}"><img class="header-logo" src="{{ asset('bundles/VRoomWebsite/images/vroom logo.png') }}" alt="logo"></a>
         </div>
         <div class="right">
-            {% if is_granted('IS_AUTHENTICATED_ANONYMOUSLY') %}
+            {% if not is_granted('ROLE_USER') %}
                 <form action="{{ path('login_check') }}" method="post">
                     <label for="email">Email :</label>
                     <input class="input" type="email" name="_username" id="email">
                     <label for="password">Mot de passe :</label>
                     <input class="input" type="password" name="_password" id="password">
                     <input class="btn" type="submit" name="submit" value="Connexion">
+                    <a class="btn" href="{{ path('register') }}">Inscription</a>
                 </form>
             {% else %}
                 <div class="right">
-                    <a href="#"><img src="{{ asset('bundles/VRoomWebsite/images/grey.svg') }}" alt="avatar" class="avatar"></a><span class="username">Username</span><span class="caret">▼</span>
+                    <a href="{{ path('profile', {'id': app.user.id, 'name': app.user.name}) }}"><img src="http://www.gravatar.com/avatar/{{ app.user.hash }}?s=64&d=retro" alt="avatar" class="avatar"><span class="username">{{ app.user.name }}</span></a>
                 </div>
             {% endif %}
         </div>

@@ -8,11 +8,17 @@
     <div class="main-content wrapper">
         <section class="summary">
             <div class="avatar-big">
-                <img src="http://www.gravatar.com/avatar/{{ hash }}?s=200&d=retro" alt="avatar big">
+                <img src="http://www.gravatar.com/avatar/{{ user.hash }}?s=200&d=retro" alt="avatar big">
             </div>
-            <h1 class="username">Username</h1>
+            <h1 class="username">{{ user.name }} {{ user.surname }}</h1>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, fugiat. Reprehenderit cupiditate officiis voluptas optio, dolore dolorem. Debitis dolorum, quos nam necessitatibus asperiores nobis. Illo praesentium debitis nostrum facilis, dolorum?
+                Adresse mail : {{ user.email }}
+            </p>
+            <p>
+                Membre depuis le : {{ user.registration | date("d/m/Y") }}
+            </p>
+            <p>
+                {{ offers|length }} {{ (offers|length)>1 ? 'annonces postées' : 'annonce postée' }}
             </p>
         </section>
         <section class="stats">
@@ -20,43 +26,30 @@
                 <h2>Annonces</h2>
                 {% for offer in offers %}
                     <article class="ride">
-                        <img src="http://www.gravatar.com/avatar/{{ hash }}?s=96&d=identicon" alt="" class="thumbnail">
+                        <img src="http://www.gravatar.com/avatar/{{ user.hash }}?s=96&d=identicon" alt="" class="thumbnail">
                         {{ offer.path.startCity.name }} - {{ offer.path.endCity.name }}<br>
                         {{ offer.startDate | date('d-m-Y') }}<br>
                         {{ user.name }}
                     </article>
                 {% endfor %}
+                {% if offers is empty %}
+                    Cet utilisateur n'a pas encore proposé de trajet
+                {% endif %}
             </div>
             <div class="half">
                 <h2>Avis</h2>
-                <article class="ride">
-                    <img src="{{ asset('bundles/VRoomWebsite/images/grey.svg') }}" alt="" class="thumbnail">
-                    <p>
-                        <span class="comment">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet.</span>
-                        Nom
-                    </p>
-                </article>
-                <article class="ride">
-                    <img src="{{ asset('bundles/VRoomWebsite/images/grey.svg') }}" alt="" class="thumbnail">
-                    <p>
-                        <span class="comment">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet.</span>
-                        Nom
-                    </p>
-                </article>
-                <article class="ride">
-                    <img src="{{ asset('bundles/VRoomWebsite/images/grey.svg') }}" alt="" class="thumbnail">
-                    <p>
-                        <span class="comment">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet.</span>
-                        Nom
-                    </p>
-                </article>
-                <article class="ride">
-                    <img src="{{ asset('bundles/VRoomWebsite/images/grey.svg') }}" alt="" class="thumbnail">
-                    <p>
-                        <span class="comment">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet.</span>
-                        Nom
-                    </p>
-                </article>
+                {% for comment in comments %}
+                    <article class="ride">
+                        <a href="{{ path('profile', {'id': comment.poster.id, 'name': comment.poster.name}) }}"><img src="http://www.gravatar.com/avatar/{{ comment.poster.hash }}?s=96&d=identicon" alt="" class="thumbnail"></a>
+                        <p>
+                            {{ comment.grade }}/10<span class="comment">{{ comment.content }}</span>
+                            par {{ comment.poster.name }} le {{ comment.date | date('d-m-Y') }}
+                        </p>
+                    </article>
+                {% endfor %}
+                {% if comments is empty %}
+                    Cet utilisateur n'a pas reçu d'évaluations
+                {% endif %}
             </div>
         </section>
         <div class="clearfix"></div>

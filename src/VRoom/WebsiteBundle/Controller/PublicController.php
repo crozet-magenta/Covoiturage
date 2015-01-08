@@ -55,17 +55,18 @@ class PublicController extends Controller
 
     public function profileAction(User $user)
     {
-        $repo = $this->getDoctrine()->getRepository('VRoomWebsiteBundle:Offer');
-        $hash = md5(strtolower(trim($user->getEmail())));
-        $offers = $repo->findByUser($user);
-        return $this->render('VRoomWebsiteBundle:Public:profile.html.twig', compact('user', 'offers', 'hash'));
+        $repo     = $this->getDoctrine()->getRepository('VRoomWebsiteBundle:Offer');
+        $offers   = $repo->findByUser($user);
+        $repo     = $this->getDoctrine()->getRepository('VRoomWebsiteBundle:Comment');
+        $comments = $repo->findByUser($user);
+        return $this->render('VRoomWebsiteBundle:Public:profile.html.twig', compact('user', 'offers', 'comments'));
     }
 
     public function offerAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
 
-        $form = $this->createForm(new OfferType(), new Offer(), ['em'=>$em,]);
+        $form = $this->createForm(new OfferType(), new Offer(), ['em'=>$em,'attr'=>['class'=>'main-form']]);
         $form->handleRequest($request);
 
         if ($request->getMethod() == 'POST') {

@@ -3,16 +3,16 @@ home:
     defaults: { _controller: VRoomWebsiteBundle:Public:home }
 
 profile:
-    path:     /profile/{name}
+    path:     /profile/{id}-{name}
     defaults: { _controller: VRoomWebsiteBundle:Public:profile }
 
 offer:
     path:     /register/offer
     defaults: { _controller: VRoomWebsiteBundle:Public:offer }
 
-login:
-    pattern:  /login
-    defaults: { _controller: VRoomWebsiteBundle:Security:login }
+register:
+    pattern:  /register
+    defaults: { _controller: VRoomWebsiteBundle:Security:register }
 
 login_check:
     pattern:  /login_check
