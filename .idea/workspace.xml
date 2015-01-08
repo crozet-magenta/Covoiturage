@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b05e6f1b-cafe-4101-a036-785ac69d5bf7" name="Default" comment="added user role &amp; rights management&#10;added email for new user, account (dis)activated &amp; deleted">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/views/Public/home.html.twig" afterPath="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/views/Public/home.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/views/Layout/base.html.twig" afterPath="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/views/Layout/base.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/public/css/style.css" afterPath="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/public/css/style.css" />
     </list>
     <ignored path="sdd.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,8 +31,8 @@
       <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/views/Layout/base.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.62963" vertical-offset="199" max-vertical-offset="972">
-              <caret line="27" column="173" selection-start-line="27" selection-start-column="173" selection-end-line="27" selection-end-column="173" />
+            <state vertical-scroll-proportion="-8.740741" vertical-offset="304" max-vertical-offset="1044">
+              <caret line="30" column="70" selection-start-line="30" selection-start-column="70" selection-end-line="30" selection-end-column="70" />
               <folding />
             </state>
           </provider>
@@ -63,11 +64,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/public/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="4965" max-vertical-offset="6534">
-              <caret line="289" column="33" selection-start-line="289" selection-start-column="33" selection-end-line="289" selection-end-column="33" />
+            <state vertical-scroll-proportion="0.9045093" vertical-offset="1585" max-vertical-offset="7398">
+              <caret line="107" column="18" selection-start-line="107" selection-start-column="18" selection-end-line="107" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -83,10 +84,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.html.twig" pinned="false" current-in-tab="true">
+      <file leaf-file-name="home.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/views/Public/home.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.64640886" vertical-offset="486" max-vertical-offset="990">
+            <state vertical-scroll-proportion="-8.666667" vertical-offset="486" max-vertical-offset="990">
               <caret line="40" column="64" selection-start-line="40" selection-start-column="64" selection-end-line="40" selection-end-column="64" />
               <folding />
             </state>
@@ -152,11 +153,11 @@
         <option value="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/views/Public/registerOffer.html.twig" />
         <option value="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Entity/Comment.php" />
-        <option value="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/public/css/style.css" />
         <option value="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Controller/PublicController.php" />
-        <option value="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/views/Layout/base.html.twig" />
         <option value="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/views/Public/profile.html.twig" />
         <option value="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/views/Public/home.html.twig" />
+        <option value="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/views/Layout/base.html.twig" />
+        <option value="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/public/css/style.css" />
       </list>
     </option>
   </component>
@@ -1207,10 +1208,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/public/css/style.css">
+    <entry file="file://$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/views/Public/home.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="4965" max-vertical-offset="6534">
-          <caret line="289" column="33" selection-start-line="289" selection-start-column="33" selection-end-line="289" selection-end-column="33" />
+        <state vertical-scroll-proportion="-8.666667" vertical-offset="486" max-vertical-offset="990">
+          <caret line="40" column="64" selection-start-line="40" selection-start-column="64" selection-end-line="40" selection-end-column="64" />
           <folding />
         </state>
       </provider>
@@ -1219,6 +1220,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.925926" vertical-offset="119" max-vertical-offset="3186">
           <caret line="23" column="7" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/views/Layout/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.740741" vertical-offset="304" max-vertical-offset="1044">
+          <caret line="30" column="70" selection-start-line="30" selection-start-column="70" selection-end-line="30" selection-end-column="70" />
           <folding />
         </state>
       </provider>
@@ -1237,14 +1246,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/views/Layout/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.62963" vertical-offset="199" max-vertical-offset="972">
-          <caret line="27" column="173" selection-start-line="27" selection-start-column="173" selection-end-line="27" selection-end-column="173" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/views/Public/profile.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.3333335" vertical-offset="54" max-vertical-offset="1116">
@@ -1253,10 +1254,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/views/Public/home.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/public/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.64640886" vertical-offset="486" max-vertical-offset="990">
-          <caret line="40" column="64" selection-start-line="40" selection-start-column="64" selection-end-line="40" selection-end-column="64" />
+        <state vertical-scroll-proportion="0.9045093" vertical-offset="1585" max-vertical-offset="7398">
+          <caret line="107" column="18" selection-start-line="107" selection-start-column="18" selection-end-line="107" selection-end-column="18" />
           <folding />
         </state>
       </provider>
