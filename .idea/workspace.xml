@@ -3,15 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b05e6f1b-cafe-4101-a036-785ac69d5bf7" name="Default" comment="added user role &amp; rights management&#10;added email for new user, account (dis)activated &amp; deleted">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Controller/PublicController.php" afterPath="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Controller/PublicController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Controller/SecurityController.php" afterPath="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Controller/SecurityController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Entity/User.php" afterPath="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Entity/User.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/views/Layout/base.html.twig" afterPath="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/views/Layout/base.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/views/Public/home.html.twig" afterPath="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/views/Public/home.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/views/Public/profile.html.twig" afterPath="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/views/Public/profile.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/views/Public/register.html.twig" afterPath="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/views/Public/register.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/views/Public/registerOffer.html.twig" afterPath="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/views/Public/registerOffer.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/config/routing.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/public/css/style.css" afterPath="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/public/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="sdd.iws" />
@@ -47,6 +38,22 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="PublicController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/VRoom/WebsiteBundle/Controller/PublicController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.74603176" vertical-offset="348" max-vertical-offset="1404">
+              <caret line="48" column="18" selection-start-line="48" selection-start-column="18" selection-end-line="48" selection-end-column="18" />
+              <folding>
+                <element signature="e#50#97#0#PHP" expanded="true" />
+                <element signature="e#644#1116#0#PHP" expanded="false" />
+                <element signature="e#1138#1253#0#PHP" expanded="false" />
+                <element signature="e#1298#1413#0#PHP" expanded="false" />
+                <marker date="1420708871084" expanded="true" signature="685:1095" placeholder="SELECT *, 39..cities..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="profile.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/views/Public/profile.html.twig">
           <provider selected="true" editor-type-id="text-editor">
@@ -57,10 +64,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/public/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.58518517" vertical-offset="4965" max-vertical-offset="6534">
+            <state vertical-scroll-proportion="0.0" vertical-offset="4965" max-vertical-offset="6534">
               <caret line="289" column="33" selection-start-line="289" selection-start-column="33" selection-end-line="289" selection-end-column="33" />
               <folding />
             </state>
@@ -137,10 +144,10 @@
         <option value="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/views/Public/registerOffer.html.twig" />
         <option value="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/views/Layout/base.html.twig" />
-        <option value="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Controller/PublicController.php" />
         <option value="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Entity/Comment.php" />
         <option value="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/views/Public/profile.html.twig" />
         <option value="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/public/css/style.css" />
+        <option value="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Controller/PublicController.php" />
       </list>
     </option>
   </component>
@@ -719,10 +726,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="161" y="1075" width="1368" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32792208" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3291536" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3291536" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32864866" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -817,7 +824,7 @@
             <element signature="e#644#1116#0#PHP" expanded="false" />
             <element signature="e#1138#1253#0#PHP" expanded="false" />
             <element signature="e#1298#1413#0#PHP" expanded="false" />
-            <marker date="1420706817332" expanded="true" signature="-1:-1" placeholder="SELECT *, 39..cities..." />
+            <marker date="1420708871084" expanded="true" signature="685:1095" placeholder="SELECT *, 39..cities..." />
           </folding>
         </state>
       </provider>
@@ -1161,20 +1168,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/VRoom/WebsiteBundle/Controller/PublicController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3877551" vertical-offset="564" max-vertical-offset="1386">
-          <caret line="57" column="17" selection-start-line="57" selection-start-column="17" selection-end-line="57" selection-end-column="17" />
-          <folding>
-            <element signature="e#50#97#0#PHP" expanded="true" />
-            <element signature="e#644#1116#0#PHP" expanded="false" />
-            <element signature="e#1138#1253#0#PHP" expanded="false" />
-            <element signature="e#1298#1413#0#PHP" expanded="false" />
-            <marker date="1420706817332" expanded="true" signature="-1:-1" placeholder="SELECT *, 39..cities..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/VRoom/WebsiteBundle/Entity/Comment.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.04761905" vertical-offset="108" max-vertical-offset="1188">
@@ -1213,14 +1206,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/views/Layout/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.62963" vertical-offset="199" max-vertical-offset="972">
-          <caret line="27" column="96" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="96" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/views/Public/home.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-30.666666" vertical-offset="0" max-vertical-offset="990">
@@ -1239,9 +1224,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/public/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.58518517" vertical-offset="4965" max-vertical-offset="6534">
+        <state vertical-scroll-proportion="0.0" vertical-offset="4965" max-vertical-offset="6534">
           <caret line="289" column="33" selection-start-line="289" selection-start-column="33" selection-end-line="289" selection-end-column="33" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/views/Layout/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.62963" vertical-offset="199" max-vertical-offset="972">
+          <caret line="27" column="96" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="96" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/VRoom/WebsiteBundle/Controller/PublicController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.74603176" vertical-offset="348" max-vertical-offset="1404">
+          <caret line="48" column="18" selection-start-line="48" selection-start-column="18" selection-end-line="48" selection-end-column="18" />
+          <folding>
+            <element signature="e#50#97#0#PHP" expanded="true" />
+            <element signature="e#644#1116#0#PHP" expanded="false" />
+            <element signature="e#1138#1253#0#PHP" expanded="false" />
+            <element signature="e#1298#1413#0#PHP" expanded="false" />
+            <marker date="1420708871084" expanded="true" signature="685:1095" placeholder="SELECT *, 39..cities..." />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -46,6 +46,7 @@ class PublicController extends Controller
             ->setParameter('ids', $ids)
             ->getQuery();
         $paths = $query->getResult();
+        $ids = [];
         foreach ($paths as $path) {
             $ids[] = $path->getId();
         }
