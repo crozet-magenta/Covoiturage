@@ -36,7 +36,7 @@
             <h1>Près de chez vous</h1>
             {%  for ride in data %}
                 <article class="ride half">
-                    <img src="{{ ride.user.hash }}" alt="avatar" class="thumbnail">
+                    <img src="http://www.gravatar.com/avatar/{{ ride.user.hash }}?s=64&d=retro" alt="avatar" class="thumbnail">
                     {{ ride.path.startCity.name }} - {{ ride.path.endCity.name }}<br>
                     {{ ride.startDate | date("d/m/Y G:i") }}<br>
                     {{ ride.user.surname }} {{ ride.user.name }}
