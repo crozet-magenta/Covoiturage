@@ -18,6 +18,10 @@ register:
     pattern:  /register
     defaults: { _controller: VRoomWebsiteBundle:Security:register }
 
+login:
+    path:     /
+    defaults: { _controller: VRoomWebsiteBundle:Public:home }
+
 login_check:
     pattern:  /login_check
 

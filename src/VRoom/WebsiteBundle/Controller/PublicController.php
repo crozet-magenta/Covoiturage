@@ -50,8 +50,10 @@ class PublicController extends Controller
         foreach ($paths as $path) {
             $ids[] = $path->getId();
         }
-        $data = $em->getRepository('VRoomWebsiteBundle:Offer')->findBy(['path' => $ids]);
-        return $this->render('VRoomWebsiteBundle:Public:home.html.twig', compact('data'));
+        $near = $em->getRepository('VRoomWebsiteBundle:Offer')->findBy(['path' => $ids]);
+        $next = $em->getRepository('VRoomWebsiteBundle:Offer')->findBy([], ['startDate' => 'ASC'], 25);
+
+        return $this->render('VRoomWebsiteBundle:Public:home.html.twig', compact('near', 'next'));
     }
 
     public function profileAction(User $user)

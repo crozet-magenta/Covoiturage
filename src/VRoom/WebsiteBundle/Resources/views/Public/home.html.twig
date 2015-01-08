@@ -33,18 +33,40 @@
     </div>
     <div class="main-content">
         <div class="wrapper">
-            <h1>Près de chez vous</h1>
-            {%  for ride in data %}
-                <article class="ride half">
-                    <img src="http://www.gravatar.com/avatar/{{ ride.user.hash }}?s=96&d=retro" alt="avatar" class="thumbnail">
-                    {{ ride.path.startCity.name }} - {{ ride.path.endCity.name }}<br>
-                    {{ ride.startDate | date("d/m/Y G:i") }}<br>
-                    {{ ride.user.surname }} {{ ride.user.name }}
-                </article>
-            {% endfor %}
-            {% if data is empty %}
-                Il n'y a pas de trajet près de chez vous.
-            {% endif %}
+            <h1>Annonces</h1>
+            <div class="right half">
+                <h2>Près de chez vous</h2>
+                {%  for ride in near %}
+                    <article class="ride">
+                        <a href="{{ path('profile', {'id': ride.user.id, 'name': ride.user.name}) }}"><img src="http://www.gravatar.com/avatar/{{ ride.user.hash }}?s=96&d=identicon" alt="" class="thumbnail"></a>
+                        <a href="{{ path('offer_details', {'id': ride.id, 'start': ride.path.startCity.name, 'end': ride.path.endCity.name}) }}">
+                            {{ ride.path.startCity.name }} - {{ ride.path.endCity.name }}
+                        </a><br>
+                        {{ ride.startDate | date('d-m-Y \\à G\\hi') }}<br>
+                        {{ ride.user.name }}
+                    </article>
+                {% endfor %}
+                {% if near is empty %}
+                    Il n'y a pas de trajet près de chez vous.
+                {% endif %}
+            </div>
+            <div class="right half">
+                <h2>Prochains départs</h2>
+                {%  for ride in next %}
+                    <article class="ride">
+                        <a href="{{ path('profile', {'id': ride.user.id, 'name': ride.user.name}) }}"><img src="http://www.gravatar.com/avatar/{{ ride.user.hash }}?s=96&d=identicon" alt="" class="thumbnail"></a>
+                        <a href="{{ path('offer_details', {'id': ride.id, 'start': ride.path.startCity.name, 'end': ride.path.endCity.name}) }}">
+                            
+                            {{ ride.path.startCity.name }} - {{ ride.path.endCity.name }}
+                        <br>
+                        {{ ride.startDate | date('d-m-Y \\à G\\hi') }}<br>
+                        {{ ride.user.name }}</a>
+                    </article>
+                {% endfor %}
+                {% if next is empty %}
+                    Il n'y a pas de trajet enregistré.
+                {% endif %}
+            </div>
         </div>
     </div>
 {% endblock %}
