@@ -22,30 +22,31 @@
             </p>
         </section>
         <section class="stats">
-            <div class="half">
+            <div class="half left">
                 <h2>Annonces</h2>
                 {% for offer in offers %}
                     <article class="ride">
                         <a href="{{ path('profile', {'id': offer.user.id, 'name': offer.user.name}) }}"><img src="http://www.gravatar.com/avatar/{{ offer.user.hash }}?s=96&d=identicon" alt="" class="thumbnail"></a>
                         <a href="{{ path('offer_details', {'id': offer.id, 'start': offer.path.startCity.name, 'end': offer.path.endCity.name}) }}">
                             {{ offer.path.startCity.name }} - {{ offer.path.endCity.name }}
-                        </a><br>
+                        <br>
                         {{ offer.startDate | date('d-m-Y') }}<br>
                         {{ user.name }}
+                        </a>
                     </article>
                 {% endfor %}
                 {% if offers is empty %}
                     Cet utilisateur n'a pas encore proposé de trajet
                 {% endif %}
             </div>
-            <div class="half">
+            <div class="half right">
                 <h2>Avis</h2>
                 {% for comment in comments %}
                     <article class="ride">
                         <a href="{{ path('profile', {'id': comment.poster.id, 'name': comment.poster.name}) }}"><img src="http://www.gravatar.com/avatar/{{ comment.poster.hash }}?s=96&d=identicon" alt="" class="thumbnail"></a>
                         <p>
                             {{ comment.grade }}/10<span class="comment">{{ comment.content }}</span>
-                            par {{ comment.poster.name }} le {{ comment.date | date('d-m-Y') }}
+                            par <a href="{{ path('profile', {'id': comment.poster.id, 'name': comment.poster.name}) }}">{{ comment.poster.name }}</a> le {{ comment.date | date('d-m-Y') }}
                         </p>
                     </article>
                 {% endfor %}

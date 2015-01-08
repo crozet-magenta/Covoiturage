@@ -6,11 +6,33 @@
 
 {% block content %}
     <div class="main-content wrapper">
-        <iframe
-                width="600"
-                height="450"
-                frameborder="0" style="border:0"
-                src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyCGtbB168WhHbDpMiJxrRzu0ZJGnwH3isg&origin={{ offer.path.startCity.name }}&destination={{ offer.path.endCity.name }}">
-        </iframe>
+        <h1>Voyage {{ offer.path.startCity.name }} - {{ offer.path.endCity.name }}</h1>
+        <h2 class="small">Voyage proposé par <strong><a href="{{ path('profile', {'id': offer.user.id, 'name': offer.user.name}) }}">{{ offer.user.name }}</a></strong></h2>
+        <div class="path">
+            <div class="text">
+                <div class="start left">
+                    <strong>{{ offer.path.startCity.name }}</strong>
+                    <br/>Le {{ offer.startDate | date('d-m-Y \\à G\\hi') }}
+                </div>
+
+                <div class="end right">
+                    <strong>{{ offer.path.endCity.name }}</strong>
+                </div>
+
+                <div class="center">
+                    {{ offer.price }} € / personne<br/>
+                    {{ offer.seats }} places disponibles
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="bar">
+                <div class="dot left"></div>
+                <div class="progress"></div>
+                <div class="dot right"></div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+
+        <iframe frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyCGtbB168WhHbDpMiJxrRzu0ZJGnwH3isg&origin={{ offer.path.startCity.name }}&destination={{ offer.path.endCity.name }}"></iframe>
     </div>
 {% endblock %}

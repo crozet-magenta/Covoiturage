@@ -1,5 +1,5 @@
 
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -13,8 +13,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
     margin: 0;
@@ -25,7 +25,7 @@ time, mark, audio, video {
     vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
     display: block;
 }
@@ -65,7 +65,7 @@ table {
 
 html {
     font-family: "Champagne_Limousines" sans-serif;
-    font-size: 26px;
+    font-size: 24px;
     margin-top: 72px;
     height: 100%;
 }
@@ -78,6 +78,13 @@ a {
 h1, h2 {
     font-size: 1.5em;
     margin-bottom: 25px;
+}
+
+.half {
+    margin: 0;
+    padding: 0;
+    width: 48%;
+    float: left;
 }
 
 .left {
@@ -130,12 +137,6 @@ h1, h2 {
     padding: 0 2%;
 }
 
-.half {
-    margin: 0;
-    padding: 0;
-    width: 50%;
-    float: left;
-}
 
 .header {
     background-color: #fe6c6c;
@@ -220,7 +221,8 @@ h1, h2 {
     color: #fff;
     vertical-align: middle;
     font-style: italic;
-    
+    position: fixed;
+    bottom: 0;
 }
 
 .footer img {
@@ -231,8 +233,10 @@ h1, h2 {
 .ride {
     line-height: 1.2em;
     display: inline-block;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
     width: 100%;
+    border-bottom: 1px solid #a18383;
 }
 
 .thumbnail {
@@ -240,7 +244,7 @@ h1, h2 {
     height: 96px;
     margin-right: 15px;
     float: left;
-    
+
 }
 
 .avatar {
@@ -388,7 +392,7 @@ h1 .username {
     transition: all .2s ease-in-out;
 }
 
-@media (min-width: 1120px) {
+@media (min-width: 1170px) {
     .wrapper {
         padding: 0 18%;
     }
@@ -403,4 +407,62 @@ h1 .username {
     .submenu {
         right: 18%;
     }
+}
+
+iframe {
+    width: 100%;
+    height: 500px;
+}
+
+strong {
+    font-weight: bold;
+}
+
+.small {
+    font-size: 1em;
+}
+
+.dot {
+    width: 2.49%;
+    height: 100%;
+    border-radius: 100%;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZlNmM2YyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmNzMxMzEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    display: inline-block;
+    float: left;
+}
+
+.progress {
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZlNmM2YyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmNzMxMzEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    height: 5px;
+    margin: 7.5px -0.5%;
+    position: relative;
+    float: left;
+    width:96%;
+    display: inline-block;
+    z-index: -1;
+}
+
+.path {
+    width: 100%;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.bar {
+    height: 20px;
+    width: 95%;
+    margin: auto;
+}
+
+.center {
+    text-align: center;
+    margin: auto;
+}
+
+.start, .end, .center {
+    width: 33%;
+}
+
+.end {
+    text-align: right;
 }

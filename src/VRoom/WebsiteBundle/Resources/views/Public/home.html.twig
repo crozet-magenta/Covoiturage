@@ -34,7 +34,7 @@
     <div class="main-content">
         <div class="wrapper">
             <h1>Annonces</h1>
-            <div class="right half">
+            <div class="left half">
                 <h2>Près de chez vous</h2>
                 {%  for ride in near %}
                     <article class="ride">
@@ -56,7 +56,7 @@
                     <article class="ride">
                         <a href="{{ path('profile', {'id': ride.user.id, 'name': ride.user.name}) }}"><img src="http://www.gravatar.com/avatar/{{ ride.user.hash }}?s=96&d=identicon" alt="" class="thumbnail"></a>
                         <a href="{{ path('offer_details', {'id': ride.id, 'start': ride.path.startCity.name, 'end': ride.path.endCity.name}) }}">
-                            
+
                             {{ ride.path.startCity.name }} - {{ ride.path.endCity.name }}
                         <br>
                         {{ ride.startDate | date('d-m-Y \\à G\\hi') }}<br>
