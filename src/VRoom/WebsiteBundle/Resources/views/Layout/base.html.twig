@@ -27,6 +27,7 @@
                     <a href="{{ path('profile', {'id': app.user.id, 'name': app.user.name}) }}"><img src="http://www.gravatar.com/avatar/{{ app.user.hash }}?s=64&d=identicon" alt="avatar" class="avatar"><span class="username">{{ app.user.name }}</span></a>
                     <span class="caret">▼</span>
                     <div class="submenu">
+                        <a href="{{ path('add_offer') }}">Ajouter un trajet</a><br/>
                         <a href="{{ path('logout') }}">Deconnexion</a>
                     </div>
                 </div>

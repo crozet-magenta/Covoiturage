@@ -15,7 +15,7 @@ search:
     defaults: { _controller: VRoomWebsiteBundle:Public:search }
 
 offer_details:
-    path:     /offer/details/{id}-{start}-{end}
+    path:     /offer/details/{id}/{start}/{end}
     defaults: { _controller: VRoomWebsiteBundle:Public:offerDetails }
 
 register:

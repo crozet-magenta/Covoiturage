@@ -7,7 +7,7 @@
 {% endblock %}
 
 {% block form_row %}
-    <div class="clearfix">
+    <div class="row">
         {{ form_label(form) }}
         {{ form_widget(form) }}
         <div class="error">{{ form_errors(form) }}</div>
@@ -18,4 +18,19 @@
         <h1>Ajouter un trajet</h1>
         {{ form(form) }}
     </div>
+    <script src="http://maps.googleapis.com/maps/api/js?sensor=false&libraries=places" type="text/javascript"></script>
+    <script>
+        function initialize() {
+            var options = {
+                types: ['(cities)'],
+                componentRestrictions: {country: "fr"}
+            };
+
+            var input = document.getElementById('vroom_websitebundle_offer_path_startCity');
+            new google.maps.places.Autocomplete(input, options);
+            var input2 = document.getElementById('vroom_websitebundle_offer_path_endCity');
+            new google.maps.places.Autocomplete(input2, options);
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
 {% endblock %}

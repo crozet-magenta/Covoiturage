@@ -21,8 +21,8 @@
         <div class="wrapper">
             <form action="{{ path('search') }}" method="post">
                 <div class="left">
-                    <input class="input" type="text" name="from" id="from" placeholder="Départ">
-                    <input class="input" type="text" name="to" id="to" placeholder="Arrivée">
+                    <label for="from">Départ :</label><input class="input" type="text" name="from" id="from" placeholder="">
+                    <label for="to">Arrivée :</label><input class="input" type="text" name="to" id="to" placeholder="">
                     <label for="date">Date :</label><input class="input" type="date" name="date" id="date">
                 </div>
                 <div class="right">
@@ -69,4 +69,19 @@
             </div>
         </div>
     </div>
+    <script src="http://maps.googleapis.com/maps/api/js?sensor=false&libraries=places" type="text/javascript"></script>
+    <script>
+        function initialize() {
+            var options = {
+                types: ['(cities)'],
+                componentRestrictions: {country: "fr"}
+            };
+
+            var input = document.getElementById('from');
+            new google.maps.places.Autocomplete(input, options);
+            var input2 = document.getElementById('to');
+            new google.maps.places.Autocomplete(input2, options);
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
 {% endblock %}

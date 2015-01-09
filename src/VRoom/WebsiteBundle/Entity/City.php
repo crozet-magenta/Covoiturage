@@ -167,5 +167,4 @@ class City
         $this->longitude = $longitude;
     }
 
-
 }

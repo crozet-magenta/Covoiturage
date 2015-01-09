@@ -53,7 +53,9 @@ class StringToCityTransformer implements DataTransformerInterface {
     {
         if (!$value) return null;
 
-        $city = $this->om->getRepository('VRoomWebsiteBundle:City')->findOneByName($value);
+        $value = explode(',', str_replace('-', ' ', $value))[0];
+
+        $city = $this->om->getRepository('VRoomWebsiteBundle:City')->findOneBySlug($value);
 
         if (null === $city) {
             throw new TransformationFailedException(sprintf(
