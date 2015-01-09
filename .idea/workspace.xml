@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b05e6f1b-cafe-4101-a036-785ac69d5bf7" name="Default" comment="added user role &amp; rights management&#10;added email for new user, account (dis)activated &amp; deleted">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/views/Layout/base.html.twig" afterPath="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/views/Layout/base.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/views/Public/home.html.twig" afterPath="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/views/Public/home.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/config/routing.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/public/css/style.css" afterPath="$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/public/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="b05e6f1b-cafe-4101-a036-785ac69d5bf7" name="Default" comment="added user role &amp; rights management&#10;added email for new user, account (dis)activated &amp; deleted" />
     <ignored path="sdd.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -31,21 +25,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="home.html.twig" pinned="false" current-in-tab="false">
+      <file leaf-file-name="home.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/views/Public/home.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.038462" vertical-offset="0" max-vertical-offset="1309">
-              <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
-              <caret line="23" column="20" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.522604" vertical-offset="0" max-vertical-offset="1309">
+              <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routing.yml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="routing.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/config/routing.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.1722973" vertical-offset="0" max-vertical-offset="646">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="646">
               <caret line="6" column="64" selection-start-line="6" selection-start-column="64" selection-end-line="6" selection-end-column="64" />
               <folding />
             </state>
@@ -1102,19 +1095,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/views/Public/home.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/config/routing.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.038462" vertical-offset="0" max-vertical-offset="1309">
-          <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
-          <caret line="23" column="20" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="646">
+          <caret line="6" column="64" selection-start-line="6" selection-start-column="64" selection-end-line="6" selection-end-column="64" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/config/routing.yml">
+    <entry file="file://$PROJECT_DIR$/src/VRoom/WebsiteBundle/Resources/views/Public/home.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1722973" vertical-offset="0" max-vertical-offset="646">
-          <caret line="6" column="64" selection-start-line="6" selection-start-column="64" selection-end-line="6" selection-end-column="64" />
+        <state vertical-scroll-proportion="0.522604" vertical-offset="0" max-vertical-offset="1309">
+          <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
           <folding />
         </state>
       </provider>
