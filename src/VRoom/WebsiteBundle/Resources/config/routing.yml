@@ -6,9 +6,13 @@ profile:
     path:     /profile/{id}-{name}
     defaults: { _controller: VRoomWebsiteBundle:Public:profile }
 
-offer:
-    path:     /register/offer
+add_offer:
+    path:     /add/offer
     defaults: { _controller: VRoomWebsiteBundle:Public:offer }
+
+search:
+    path:     /search
+    defaults: { _controller: VRoomWebsiteBundle:Public:search }
 
 offer_details:
     path:     /offer/details/{id}-{start}-{end}

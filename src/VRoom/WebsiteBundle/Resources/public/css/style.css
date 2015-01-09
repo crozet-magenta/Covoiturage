@@ -98,8 +98,6 @@ h1, h2 {
 }
 
 .btn {
-    position: relative;
-    top: 1px;
     font-family: "Champagne_Limousines" sans-serif;
     font-size: 0.6rem;
     color: #fff;
@@ -111,8 +109,8 @@ h1, h2 {
     display: inline-block;
     line-height: normal;
     text-align: center;
-    vertical-align: middle;
     padding: 2px 6px;
+    vertical-align: middle;
 }
 
 .btn-big {
@@ -127,7 +125,10 @@ h1, h2 {
     border: 2px solid #c91a21;
     border-radius: 3px;
     margin: 0 10px;
+    padding: 2px;
+    vertical-align: middle;
 }
+
 
 .input-big {
     height: 34px;

@@ -17,10 +17,8 @@
         <div class="right">
             {% if not is_granted('ROLE_USER') %}
                 <form action="{{ path('login_check') }}" method="post">
-                    <label for="email">Email :</label>
-                    <input class="input" type="email" name="_username" id="email">
-                    <label for="password">Mot de passe :</label>
-                    <input class="input" type="password" name="_password" id="password">
+                    <input class="input" type="email" name="_username" id="email" placeholder="Email">
+                    <input class="input" type="password" name="_password" id="password" placeholder="Mot de passe">
                     <input class="btn" type="submit" name="submit" value="Connexion">
                     <a class="btn" href="{{ path('register') }}">Inscription</a>
                 </form>

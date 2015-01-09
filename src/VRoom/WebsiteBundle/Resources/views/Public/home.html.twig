@@ -19,10 +19,10 @@
     </div>
     <div class="search">
         <div class="wrapper">
-            <form action="#">
+            <form action="{{ path('search') }}" method="post">
                 <div class="left">
-                    <label for="from">Départ :</label><input class="input" type="text" name="from" id="from">
-                    <label for="to">Arrivée :</label><input class="input" type="text" name="to" id="to">
+                    <input class="input" type="text" name="from" id="from" placeholder="Départ">
+                    <input class="input" type="text" name="to" id="to" placeholder="Arrivée">
                     <label for="date">Date :</label><input class="input" type="date" name="date" id="date">
                 </div>
                 <div class="right">
